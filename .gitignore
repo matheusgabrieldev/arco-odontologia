@@ -1,0 +1,8 @@
+deploy/
+.vercel/
+.env*
+.claude/settings.local.json
+__pycache__/
+*.pyc
+Thumbs.db
+.DS_Store

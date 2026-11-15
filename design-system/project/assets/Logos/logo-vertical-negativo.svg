@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="240" height="240">
+  <rect width="120" height="120" fill="#16242A"/>
+  <g transform="translate(28 6)">
+    <path d="M8 8 C8 40 20 50 32 50 C44 50 56 40 56 8" fill="none" stroke="#CFE8DF" stroke-width="7" stroke-linecap="round"/>
+    <path d="M21 8 C21 28 26 35 32 35 C38 35 43 28 43 8" fill="none" stroke="#E3A03A" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <text x="60" y="94" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="30" letter-spacing="-1" fill="#F5F8F7">arco</text>
+  <text x="60" y="110" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7.5" letter-spacing="2.6" fill="#CFE8DF">ODONTOLOGIA</text>
+</svg>

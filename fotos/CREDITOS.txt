@@ -1,0 +1,29 @@
+Fotos do Pexels (licença Pexels: uso comercial livre, crédito opcional)
+Arquivo                    Fonte                                     Uso na LP
+hero-casal.jpg             https://www.pexels.com/photo/7910455/     reserva (antigo hero; serve p/ "Para quem é" ou CTA final)
+hero-doutora.jpg           https://www.pexels.com/photo/18252404/    01 Hero (Dra. Lívia, mesma modelo de doutora.jpg)
+hero-paciente.jpg          https://www.pexels.com/photo/8439765/     reserva (antigo hero)
+dor-protese.jpg            https://www.pexels.com/photo/7885471/     03 Para quem é: "prótese que solta"
+dor-sorriso.jpg            https://www.pexels.com/photo/6248768/     03 Para quem é: "sorriso natural" (persona Carolina)
+implante-modelo.jpg        https://www.pexels.com/photo/6502305/     04 Tratamentos: implante unitário
+trat-implante.jpg          https://www.pexels.com/photo/5622014/     04 Tratamentos: protocolo (paciente 60+, cadeira verde)
+trat-lentes.jpg            https://www.pexels.com/photo/3762441/     04 Tratamentos: lentes de contato dental
+trat-clareamento.jpg       https://www.pexels.com/photo/12934843/    04 Tratamentos: clareamento (escala de cor)
+planejamento-digital.jpg   https://www.pexels.com/photo/6812508/     05 Como funciona: escaneamento na tela
+caso-resultado.jpg         https://www.pexels.com/photo/5622001/     06 Casos: IMAGEM ILUSTRATIVA, trocar por caso real com TCLE
+doutora.jpg                https://www.pexels.com/photo/18252410/    07 Quem cuida de você (Dra. Lívia, jaleco + scrub verde-azulado)
+equipe.jpg                 https://www.pexels.com/photo/3952125/     07 Equipe
+consultorio.jpg            https://www.pexels.com/photo/6812453/     07 / 10 Ambiente da clínica
+depo-roberto.jpg           https://www.pexels.com/photo/6688614/     08 Depoimento (avatar)
+depo-marcia.jpg            https://www.pexels.com/photo/5257621/     08 Depoimento (avatar, recorte 400x400)
+depo-jorge.jpg             https://www.pexels.com/photo/7477748/     08 Depoimento (avatar, recorte 400x400)
+
+_descartadas/ guarda as fotos antigas que fugiam do guia de foto
+(doutora jovem com luz fria e cadeira azul, retrato de estúdio rosa, raio-X chamado de "scanner 3D",
+dentista com logo de outra clínica no uniforme). Pode apagar quando quiser.
+
+Regra de foto (2026-11-14): pessoas com roupa na paleta da marca (branco, azul, verde-azulado; amarelo só em detalhe),
+sem preto/vinho e sem logo de outra clínica.
+caso2-antes/depois.webp     https://www.pexels.com/photo/8727478/     06 Antes e depois: clareamento (depois = simulação)
+caso3-antes/depois.webp     https://www.pexels.com/photo/28110692/    06 Antes e depois (antes = simulação)
+caso1-antes/depois.webp     trat-lentes.jpg (já no projeto)          06 Antes e depois: lentes (antes = simulação)

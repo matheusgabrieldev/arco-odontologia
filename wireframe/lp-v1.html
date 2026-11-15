@@ -1,0 +1,983 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Implante dentário e lentes em Ribeirão Preto | Arco Odontologia</title>
+<meta name="description" content="Implantes e lentes de contato dental no Jardim Botânico, Ribeirão Preto. Escaneamento 3D na primeira consulta e plano, prazo e valor por escrito.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Implante dentário e lentes em Ribeirão Preto | Arco Odontologia">
+<meta property="og:description" content="Todo sorriso tem um desenho. O seu, você vê antes de começar: escaneamento 3D e plano, prazo e valor por escrito.">
+<meta property="og:image" content="../design-system/project/assets/Fotos/hero-doutora.jpg">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="../design-system/project/tokens.css">
+<link rel="stylesheet" href="../design-system/project/components/bundle.css">
+<script>
+/* Animações: só liga se o sistema não pede menos movimento e o navegador suporta o que precisamos */
+if (window.matchMedia && !matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) { document.documentElement.classList.add('anim'); var vi=false; try{ vi=sessionStorage.getItem('arco-intro')==='1'; sessionStorage.setItem('arco-intro','1'); }catch(e){} if(!vi) document.documentElement.classList.add('intro-on'); }
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,800&amp;family=Figtree:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400&amp;display=swap">
+<style>
+/* Rolagem suave nos links internos; as seções param abaixo da nav fixa */
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+[id]{scroll-margin-top:104px}
+/* Lenis: rolagem com inércia (desligada para quem pede menos movimento) */
+html.lenis,html.lenis body{height:auto}
+html.lenis{scroll-behavior:auto!important}
+.lenis.lenis-stopped{overflow:hidden}
+@media (max-width:760px){[id]{scroll-margin-top:84px}}
+body{margin:0}
+a{color:#2F5D57}a:hover{color:#16242A}
+.mesa{display:grid;grid-template-columns:minmax(0,1fr);gap:0;padding:0;background:var(--fundo-pagina);font-family:var(--font-texto);color:var(--texto)}
+.mesa > .arco-hero,.mesa > .arco-placa{border-radius:0}
+/* Grid: 1920 de página, 1440 de informação */
+.mesa{--grade-info:1440px;--respiro:max(var(--espaco-8),calc((100% - var(--grade-info)) / 2))}
+.conteudo{max-width:var(--grade-info);margin:0 auto;width:100%}
+/* Hero: foto de ponta a ponta, texto à esquerda, prova embaixo */
+.hero{position:relative;overflow:hidden;min-height:max(760px,min(100svh,1080px));display:grid;grid-template-rows:1fr;padding-top:96px;box-sizing:border-box;
+  background:radial-gradient(60% 70% at 78% 62%,color-mix(in srgb,var(--marca-suave) 70%,transparent),transparent 70%),var(--fundo)}
+/* Doutora dentro de um arco (forma da marca), apoiada no pé da hero */
+.hero-midia{grid-column:2;grid-row:1 / 3;align-self:end;justify-self:end;position:relative;isolation:isolate;width:clamp(440px,28vw,540px);height:min(calc(100% - var(--espaco-6)),860px);min-height:600px}
+.hero-midia::before{content:"";position:absolute;inset:-22px 22px 0 -22px;border:1.5px solid var(--marca);border-bottom:0;border-radius:999px 999px 0 0;opacity:.35;z-index:-1}
+.hero-foto{position:absolute;inset:0;margin:0;overflow:hidden;border-radius:999px 999px 0 0;background:#F1EDEC}
+.hero-foto img{position:absolute;bottom:0;left:50%;height:90%;width:auto;max-width:none;transform:translateX(-59%);display:block;
+  -webkit-mask-image:linear-gradient(to bottom,transparent,#000 7%);mask-image:linear-gradient(to bottom,transparent,#000 7%)}
+.hero-grade{width:100%;max-width:calc(var(--grade-info) + 2 * var(--espaco-8));margin:0 auto;padding:0 var(--espaco-8);box-sizing:border-box;display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:1fr auto;column-gap:var(--espaco-8)}
+.hero-texto{grid-column:1;grid-row:1;align-self:center;display:grid;gap:var(--espaco-5);justify-items:start;padding:var(--espaco-7) 0;max-width:840px}
+.hero-chip{margin:0;display:inline-flex;align-items:center;gap:10px;padding:7px 12px 7px 10px;border-radius:var(--raio-sm);background:rgba(255,255,255,.7);border:1px solid var(--linha);
+  font-family:var(--font-mono);font-size:13.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--texto)}
+.hero-chip svg{width:18px;height:16px;flex:none}
+.hero-h1{margin:0;display:grid;gap:var(--espaco-5);justify-items:start;font-weight:400}
+.hero-h1 .hero-titulo{display:block}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.hero .hero-titulo{font-size:clamp(56px,3.4vw,64px);line-height:1;letter-spacing:-.037em;max-width:none}
+.hero .hero-titulo span{display:block}
+.hero .arco-apoio{max-width:44ch;color:var(--texto)}
+.hero .arco-hero-acoes{margin-top:var(--espaco-2)}
+/* CTA da hero: mesmo botão, com leve volume e um brilho lento passando por dentro */
+.arco-btn-zap:not(.arco-zap){position:relative}
+.arco-btn-zap{overflow:hidden;isolation:isolate;border-color:var(--marca);box-shadow:0 10px 24px -15px rgba(47,93,87,.6)}
+.arco-btn-zap::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;pointer-events:none;background:linear-gradient(180deg,rgba(255,255,255,.03),transparent 60%)}
+.hero-texto .arco-btn-zap::after{content:"";position:absolute;top:0;bottom:0;left:-40%;width:30%;z-index:-1;pointer-events:none;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.06),transparent);transform:skewX(-18deg);animation:cta-brilho 9s cubic-bezier(.45,0,.55,1) 1.8s infinite}
+@keyframes cta-brilho{0%{left:-40%}45%,100%{left:120%}}
+.arco-btn-zap{transition:background-color .45s ease,border-color .45s ease,color .45s ease,box-shadow .45s ease,transform .3s ease,opacity .3s}
+.arco-btn-zap:hover{background:color-mix(in srgb,var(--marca) 84%,#fff);color:var(--sobre-marca);border-color:color-mix(in srgb,var(--marca) 84%,#fff);box-shadow:0 12px 26px -15px rgba(47,93,87,.65)}
+.arco-btn-zap:hover .arco-btn-icone{color:color-mix(in srgb,var(--marca) 84%,#fff)}
+@media (prefers-reduced-motion:reduce){.arco-btn-zap::after{animation:none;display:none}}
+/* Botão secundário da hero: branco, troca de cor suave no hover */
+.arco-btn-contorno{background:var(--fundo-elevado)}
+.arco-btn-contorno,.arco-btn-claro{transition:background-color .45s ease,border-color .45s ease,color .45s ease,transform .3s ease}
+.hero-selos{list-style:none;margin:var(--espaco-2) 0 0;padding:0;display:flex;flex-wrap:wrap;gap:var(--espaco-2) var(--espaco-5);font-size:14px;font-weight:500;color:var(--texto)}
+.hero-selos li{display:inline-flex;align-items:center;gap:8px}
+.hero-selos li::before{content:"";width:7px;height:7px;border-radius:2px;background:var(--marca)}
+.hero-selos li.local::before{display:none}
+.hero-selos svg{width:16px;height:16px;color:var(--marca)}
+.hero-avaliacao{position:absolute;left:-96px;bottom:var(--espaco-8);width:300px;box-sizing:border-box;display:grid;gap:var(--espaco-3);padding:var(--espaco-5);
+  background:rgba(255,255,255,.9);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.95);border-radius:var(--raio-md);box-shadow:var(--sombra-flutuante)}
+.hero-avaliacao-topo{display:flex;justify-content:space-between;align-items:center;color:var(--destaque);font-size:17px;letter-spacing:2px}
+.hero-avaliacao-topo b{font-family:var(--font-display);font-size:24px;font-weight:500;letter-spacing:-.02em;color:var(--texto)}
+.hero-avaliacao blockquote{margin:0;font-size:15.5px;line-height:1.5;color:var(--texto)}
+.hero-avaliacao .arco-depo-autor{padding-top:var(--espaco-4);border-top:1px solid var(--linha)}
+.hero-avaliacao .arco-depo-autor img{width:40px;height:40px}
+/* Nav de vidro, fixa no topo */
+.hero > nav{position:fixed;z-index:30;top:var(--espaco-4);left:50%;transform:translateX(-50%);width:calc(100% - 2 * var(--espaco-4));max-width:var(--grade-info);box-sizing:border-box;margin:0;padding:var(--espaco-2) var(--espaco-2) var(--espaco-2) var(--espaco-5);
+  background:rgba(245,248,247,.52);-webkit-backdrop-filter:blur(18px) saturate(160%);backdrop-filter:blur(18px) saturate(160%);
+  border:1px solid rgba(255,255,255,.65);border-radius:28px;box-shadow:0 10px 36px -18px rgba(22,36,42,.45),inset 0 1px 0 rgba(255,255,255,.75)}
+.hero-logo svg{width:180px;height:44px;display:block}
+.menu-btn{display:none;align-items:center;gap:10px;min-height:44px;padding:0 16px 0 20px;border:1px solid var(--linha-forte);border-radius:var(--raio-pilula);background:rgba(255,255,255,.55);color:var(--texto);font:500 15px var(--font-texto);cursor:pointer}
+.menu-btn svg{width:20px;height:20px}
+.menu-btn .x{display:none}
+.is-aberto .menu-btn .x{display:block}
+.is-aberto .menu-btn .tres{display:none}
+.menu-btn:focus-visible{outline:2px solid var(--foco);outline-offset:3px}
+/* Aviso de cookies (LGPD) */
+.cookies{position:fixed;z-index:40;left:var(--espaco-4);bottom:var(--espaco-4);width:min(440px,calc(100% - 2 * var(--espaco-4)));box-sizing:border-box;display:grid;gap:var(--espaco-4);padding:var(--espaco-5);
+  background:var(--fundo-elevado);color:var(--texto);border:1px solid var(--linha);border-radius:var(--raio-md);box-shadow:var(--sombra-flutuante);font-size:15px;line-height:1.5}
+.cookies[hidden]{display:none}
+.cookies h2{margin:0;font-family:var(--font-display);font-size:20px;font-weight:500;letter-spacing:-.015em}
+.cookies p{margin:0;color:var(--texto-suave)}
+.cookies p a{color:var(--marca)}
+.cookies-acoes{display:flex;flex-wrap:wrap;gap:var(--espaco-2)}
+.cookies-acoes .arco-btn{padding-right:var(--espaco-5)}
+.cookies-link{background:none;border:0;padding:0;font:inherit;color:inherit;text-decoration:underline;cursor:pointer;letter-spacing:inherit}
+@media (prefers-reduced-motion:no-preference){.cookies:not([hidden]){animation:cookies-entra .4s cubic-bezier(.2,.7,.2,1)}}
+@keyframes cookies-entra{from{opacity:0;transform:translateY(12px)}}
+@media (max-width:760px){.cookies{left:var(--espaco-3);right:var(--espaco-3);bottom:var(--espaco-3);width:auto;padding:var(--espaco-4)}.cookies-acoes .arco-btn{flex:1;justify-content:center}}
+.grade-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--espaco-3)}
+/* ===== Animações suaves (só com html.anim) ===== */
+@keyframes sobe{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes some-in{from{opacity:0}to{opacity:1}}
+@keyframes traco{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+html.anim .hero-logo path{stroke-dasharray:1;stroke-dashoffset:1;animation:traco 1.1s cubic-bezier(.65,0,.35,1) .15s forwards}
+html.anim .hero-logo .logo-arco2{animation-delay:.55s}
+html.anim .hero-logo text{animation:some-in .9s ease .7s both}
+html.anim .rodape-marca path{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 2.4s cubic-bezier(.65,0,.35,1)}
+html.anim .rodape-marca path + path{transition-delay:.6s}
+html.anim .rodape.is-vista .rodape-marca path{stroke-dashoffset:0}
+@keyframes sobe-leve{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+/* 1. Entrada da hero, em sequência */
+html.anim .hero-chip,html.anim .hero-titulo,html.anim .hero .arco-apoio,html.anim .hero .arco-hero-acoes,html.anim .hero-selos,html.anim .hero-avaliacao{animation:sobe-leve 1.1s cubic-bezier(.25,.6,.3,1) both}
+html.anim .hero-titulo{animation-delay:.05s}
+html.anim .hero .arco-apoio{animation-delay:.12s}
+html.anim .hero .arco-hero-acoes{animation-delay:.18s}
+html.anim .hero-selos{animation-delay:.24s}
+html.anim .hero-avaliacao{animation-delay:.5s}
+html.anim .hero-foto{animation:some-in 1.4s ease-out both}
+html.anim .hero-midia::before{animation:some-in 1.4s ease-out .2s both}
+@media (max-width:760px){html.anim .hero-foto{animation:some-in 1s ease both}}
+/* 2. Revelar ao rolar (a classe .revela é posta pelo JS) */
+html.anim .revela{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.7,.2,1) var(--atraso,0s),transform .7s cubic-bezier(.2,.7,.2,1) var(--atraso,0s)}
+html.anim .revela.is-visivel{opacity:1;transform:none}
+/* 6. Fotos dos cards: zoom leve de fora para dentro */
+html.anim .revela .dor-foto img,html.anim .revela .arco-trat-foto img,html.anim .revela.arco-cartao-foto img,html.anim .revela.arco-foto img{transform:scale(1.1);transition:transform 1.4s cubic-bezier(.2,.7,.2,1) var(--atraso,0s)}
+html.anim .revela.is-visivel .dor-foto img,html.anim .revela.is-visivel .arco-trat-foto img,html.anim .revela.is-visivel.arco-cartao-foto img,html.anim .revela.is-visivel.arco-foto img{transform:none}
+html.anim .dor.is-visivel:hover .dor-foto img{transform:scale(1.04);transition-duration:.6s;transition-delay:0s}
+/* Celular/toque: o card que passa pelo meio da tela ganha o mesmo efeito do hover */
+@media (hover:none){
+html .dor.is-foco .dor-foto img,html.anim .revela.is-visivel.dor.is-foco .dor-foto img{transform:scale(1.05);transition:transform 1.2s cubic-bezier(.22,1,.36,1)}
+html .arco-trat.is-foco .arco-trat-foto img,html.anim .revela.is-visivel.arco-trat.is-foco .arco-trat-foto img{transform:scale(1.05);transition:transform 1.2s cubic-bezier(.22,1,.36,1)}
+html .quem-fotos .arco-cartao-foto.is-foco img,html.anim .quem-fotos .revela.is-visivel.arco-cartao-foto.is-foco img{transform:scale(1.04)}
+.quem-fotos .arco-cartao-foto.is-foco figcaption{transform:translateY(-4px)}
+.casos .ad.is-ativo .ad-alca{animation:alca-pulsa 2.4s ease-in-out infinite}
+}
+@keyframes alca-pulsa{0%,100%{box-shadow:0 0 0 0 rgba(255,255,255,.45)}50%{box-shadow:0 0 0 10px rgba(255,255,255,0)}}
+@media (prefers-reduced-motion:reduce){.casos .ad-alca{animation:none!important}}
+/* 4. Etapas: a barra de cada uma se preenche em sequência */
+.como-grade .arco-etapa{position:relative}
+.como-grade .arco-etapa::before{background:var(--linha)!important}
+.como-grade .arco-etapa::after{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;border-radius:2px;background:var(--marca)}
+.como-grade .arco-etapa{padding-right:60px}
+.etapa-ic{position:absolute;right:0;top:2px;width:44px;height:44px;border-radius:14px;display:grid;place-items:center;color:var(--marca);background:var(--marca-suave);transition:transform .5s cubic-bezier(.22,1,.36,1),background-color .5s ease}
+.etapa-ic svg{width:22px;height:22px}
+html.anim .etapa-ic{background:var(--fundo-suave);color:var(--texto-suave)}
+html.anim .etapa-ic path{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.1s cubic-bezier(.65,0,.35,1)}
+html.anim .arco-etapa.is-cheia .etapa-ic{background:var(--marca-suave);color:var(--marca)}
+html.anim .arco-etapa.is-cheia .etapa-ic path{stroke-dashoffset:0}
+html.anim .arco-etapa.is-cheia .etapa-ic path + path{transition-delay:.35s}
+@media (hover:hover){.arco-etapa:hover .etapa-ic{transform:translateY(-3px) rotate(-8deg) scale(1.08)}}
+/* Combinado: três promessas, cada uma acende conforme a rolagem */
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.palavras .arco-rotulo{margin-bottom:var(--espaco-6)}
+.palavras-lista{list-style:none;margin:0;padding:0;display:grid}
+.palavras-lista li{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:var(--espaco-8);align-items:center;padding:var(--espaco-6) 0;border-top:1px solid var(--linha)}
+.palavras-lista li:last-child{border-bottom:1px solid var(--linha)}
+.palavras-frase{font-family:var(--font-display);font-weight:500;font-size:clamp(44px,5.6vw,96px);line-height:1;letter-spacing:-.04em;color:var(--texto)}
+.palavras-frase.tom{color:var(--marca)}
+.palavras-lista p{margin:0;font-size:18px;line-height:1.55;color:var(--texto-suave);max-width:38ch}
+.palavras-lista li > *{transition:opacity .7s ease,transform .7s cubic-bezier(.22,1,.36,1)}
+html.anim .palavras-lista li > *{opacity:.15;transform:translateY(10px)}
+html.anim .palavras-lista li.on > *{opacity:1;transform:none}
+html.anim .palavras-lista li.on p{transition-delay:.12s}
+@media (max-width:760px){.palavras-lista li{grid-template-columns:minmax(0,1fr);gap:var(--espaco-3);padding:var(--espaco-5) 0}.palavras-lista p{font-size:16px}}
+/* Abertura: fundo da marca, símbolo se desenhando, nome aparecendo; sobe e libera a página */
+.intro{display:none}
+html.intro-on .intro{display:grid;position:fixed;inset:0;z-index:100;place-items:center;background:var(--grafite);color:var(--sobre-grafite);animation:intro-sai .8s cubic-bezier(.76,0,.24,1) 1.9s forwards}
+html.intro-on body{overflow:hidden}
+html.intro-on .hero *,html.intro-on .hero::before{animation-play-state:paused!important}
+.intro-marca{display:grid;justify-items:center;gap:14px}
+.intro-marca svg{width:96px;height:84px;overflow:visible}
+.intro-marca path{stroke-dasharray:1;stroke-dashoffset:1;animation:traco .9s cubic-bezier(.65,0,.35,1) .15s forwards}
+.intro-marca path + path{animation-delay:.5s}
+.intro-nome{font-family:var(--font-display);font-weight:800;font-size:44px;letter-spacing:-.03em;line-height:1;opacity:0;transform:translateY(10px);animation:intro-in .8s cubic-bezier(.22,1,.36,1) .85s forwards}
+.intro-sub{font-family:var(--font-mono);font-size:11px;letter-spacing:.42em;color:var(--marca-suave);opacity:0;animation:intro-in .8s cubic-bezier(.22,1,.36,1) 1.05s forwards;margin-right:-.42em}
+.intro-linha{width:0;height:2px;border-radius:2px;background:var(--destaque);animation:intro-linha .7s cubic-bezier(.65,0,.35,1) 1.2s forwards}
+@keyframes intro-in{to{opacity:1;transform:none}}
+@keyframes intro-linha{to{width:56px}}
+@keyframes intro-sai{to{transform:translateY(-100%);border-radius:0 0 50% 50% / 0 0 80px 80px}}
+/* Etapas: barra enche conforme a rolagem (--p de 0 a 1, via JS) */
+html.anim .como-grade .arco-etapa::after{transform:scaleY(var(--p,0));transform-origin:top;transition:transform .25s linear}
+html.anim .como-grade .arco-etapa h3{transition:color .5s ease}
+html.anim .como-grade .arco-etapa:not(.is-cheia) h3{color:var(--texto-suave)}
+
+/* 5. Perguntas: a resposta desliza (altura animada pelo JS) */
+.arco-pergunta p{overflow:hidden}
+.duvidas .arco-perguntas{border-top:0}
+.duvidas .arco-pergunta:last-child{border-bottom:0}
+.arco-pergunta{position:relative}
+.arco-pergunta::before{content:"";position:absolute;left:-18px;top:22px;bottom:22px;width:3px;border-radius:2px;background:var(--marca);transform:scaleY(0);transform-origin:top;transition:transform .6s cubic-bezier(.22,1,.36,1)}
+.arco-pergunta[open]::before{transform:none}
+.arco-pergunta summary{transition:color .35s ease,transform .45s cubic-bezier(.22,1,.36,1)}
+.arco-pergunta summary::after{transition:transform .45s cubic-bezier(.22,1,.36,1),background-color .35s ease,border-color .35s ease,color .35s ease}
+@media (hover:hover){.arco-pergunta summary:hover{color:var(--marca);transform:translateX(4px)}.arco-pergunta summary:hover::after{background:var(--marca-suave);border-color:var(--marca);color:var(--marca)}}
+.arco-pergunta[open] summary{color:var(--marca)}
+@media (max-width:760px){.arco-pergunta::before{left:-12px}}
+/* Tratamentos: o card sob o mouse abre um pouco, devagar (só desktop com mouse) */
+@media (min-width:1001px) and (hover:hover){
+.grade-4.trat-galeria{display:flex;gap:var(--espaco-3);align-items:stretch}
+.trat-galeria.sem-transicao > .arco-trat{transition:none!important}
+.trat-galeria > .arco-trat{flex:1 1 0;min-width:0;transition:flex-grow 1.1s cubic-bezier(.22,1,.36,1),box-shadow .8s ease}
+html.anim .trat-galeria > .arco-trat.revela{transition:flex-grow 1.1s cubic-bezier(.22,1,.36,1),box-shadow .8s ease,opacity .7s cubic-bezier(.2,.7,.2,1) var(--atraso,0s),transform .7s cubic-bezier(.2,.7,.2,1) var(--atraso,0s)}
+.trat-galeria > .arco-trat:hover,.trat-galeria > .arco-trat.is-medindo{flex-grow:1.28;box-shadow:0 22px 44px -30px rgba(22,36,42,.35)}
+.trat-galeria .arco-trat-foto{aspect-ratio:auto;height:clamp(220px,17vw,260px)}
+.trat-galeria .arco-trat-foto img,html.anim .revela.is-visivel .arco-trat-foto img{transition:transform 1.4s cubic-bezier(.22,1,.36,1)}
+.trat-galeria .arco-trat:hover .arco-trat-foto img{transform:scale(1.05)}
+.trat-galeria .arco-trat-corpo{min-height:var(--trat-corpo,0px)}
+}
+/* Para quem é: cards com foto em arco */
+.dores{gap:var(--espaco-5)}
+.dor{display:grid;grid-template-rows:auto 1fr;background:var(--fundo);border-radius:var(--raio-lg);overflow:hidden}
+.dor-foto{margin:var(--espaco-3) var(--espaco-3) 0;aspect-ratio:5 / 4;border-radius:999px 999px var(--raio-md) var(--raio-md);overflow:hidden;background:var(--fundo-suave)}
+.dor-foto img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.dor:hover .dor-foto img{transform:scale(1.04)}
+.dor-corpo{display:grid;gap:var(--espaco-3);align-content:start;padding:var(--espaco-5) var(--espaco-6) var(--espaco-6)}
+.dor h3{margin:0;font-family:var(--font-display);font-size:28px;line-height:1.15;font-weight:500;letter-spacing:-.02em}
+.dor p{margin:0;color:var(--texto-suave);font-size:16.5px;line-height:1.55}
+.dor-link{margin-top:var(--espaco-2);display:inline-flex;gap:8px;align-items:center;font-weight:500;color:var(--marca);text-decoration:none}
+.dor-link span{transition:transform .25s}
+.dor-link:hover span{transform:translateX(3px)}
+/* Como funciona: etapas e foto lado a lado */
+.como-grade{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:var(--espaco-8);align-items:center}
+.como-grade .arco-etapas{grid-template-columns:minmax(0,1fr);gap:var(--espaco-5)}
+.como-grade .arco-etapa{grid-template-columns:auto 1fr;column-gap:var(--espaco-4);row-gap:2px}
+.como-grade .arco-etapa::before{grid-row:1 / 4;width:4px;height:auto;margin:0}
+.como-grade .arco-etapa > *{grid-column:2}
+.como-grade .como-foto{margin:0;aspect-ratio:4 / 3}
+.confianca-foto{margin:var(--espaco-8) 0 0;aspect-ratio:16 / 9;--ini:.5}
+.confianca-foto img{object-position:50% 40%}
+/* A foto cresce conforme a rolagem: --p vai de 0 a 1 (posto pelo JS). Nada é travado. */
+html.anim .confianca-foto{--p:0;transform-origin:50% 0;will-change:transform;transform:scale(calc(var(--ini) + (1 - var(--ini)) * var(--p)))}
+.confianca-selos{margin-top:var(--espaco-6)}
+/* Cabeçalho centralizado */
+.arco-secao-topo.is-centro{justify-items:center;text-align:center;max-width:820px;margin-left:auto;margin-right:auto}
+.arco-secao-topo.is-centro .arco-titulo{max-width:none}
+/* Marca: o rótulo das seções vira o "u" do símbolo (âmbar fica só no que se clica) */
+.arco-rotulo::before{width:10px;height:7px;border:2px solid var(--marca);border-top:0;border-radius:0 0 7px 7px;background:none;margin-top:-3px}
+.arco-placa-escura .arco-rotulo::before{background:none;border-color:var(--marca-suave)}
+.grade-4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--espaco-3)}
+.grade-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--espaco-3)}
+.acao-secao{margin-top:var(--espaco-7);display:flex;flex-wrap:wrap;gap:var(--espaco-4);align-items:center}
+.acao-secao .arco-selos{margin:0}
+.quem{display:grid;grid-template-columns:340px 1fr;gap:var(--espaco-8);align-items:center}
+.quem-texto{display:grid;gap:var(--espaco-5)}
+.quem-frase{margin:0;font-family:var(--font-display);font-size:30px;line-height:1.25;letter-spacing:-.02em}
+.quem-fotos{margin-top:var(--espaco-8)}
+/* Equipe/consultório: zoom lento na foto e legenda subindo de leve no hover */
+.quem-fotos .arco-cartao-foto{overflow:hidden}
+.quem-fotos .arco-cartao-foto figcaption{transition:transform .8s cubic-bezier(.22,1,.36,1)}
+.quem-fotos .arco-cartao-foto figcaption span{transition:opacity .8s ease}
+html .quem-fotos .arco-cartao-foto img,html.anim .quem-fotos .revela.is-visivel.arco-cartao-foto img{transition:transform 1.6s cubic-bezier(.22,1,.36,1)}
+@media (hover:hover){
+  html .quem-fotos .arco-cartao-foto:hover img,html.anim .quem-fotos .revela.is-visivel.arco-cartao-foto:hover img{transform:scale(1.04)}
+  .quem-fotos .arco-cartao-foto:hover figcaption{transform:translateY(-4px)}
+}
+@media (prefers-reduced-motion:reduce){.quem-fotos .arco-cartao-foto img,.quem-fotos .arco-cartao-foto figcaption{transition:none!important;transform:none!important}}
+.casos-topo{display:flex;justify-content:space-between;align-items:flex-end;gap:var(--espaco-6);margin-bottom:var(--espaco-8)}
+.casos-topo .arco-secao-topo{margin:0}
+.casos-setas{display:flex;gap:var(--espaco-2);flex:none}
+.casos-seta{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;cursor:pointer;color:var(--texto);background:var(--fundo-elevado);border:1px solid var(--linha);transition:background .25s,border-color .25s,transform .2s}
+.casos-seta svg{width:20px;height:20px}
+.casos-seta:hover{border-color:var(--texto);background:#fff}
+.casos-seta:active{transform:scale(.95)}
+.casos-seta:focus-visible{outline:2px solid var(--foco);outline-offset:3px}
+/* Galeria: o caso ativo abre; os outros ficam estreitos mostrando o "depois" */
+.casos{position:relative;display:flex;gap:var(--espaco-4);height:clamp(440px,36vw,560px)}
+.casos > .ad{flex:1 1 0;min-width:0;display:flex;flex-direction:column;gap:var(--espaco-4);transition:flex-grow .7s cubic-bezier(.65,0,.35,1),opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.casos > .ad.is-ativo{flex-grow:1.2}
+html.anim .casos > .ad.revela{transition:flex-grow .7s cubic-bezier(.65,0,.35,1),opacity .7s cubic-bezier(.2,.7,.2,1) var(--atraso,0s),transform .7s cubic-bezier(.2,.7,.2,1) var(--atraso,0s)}
+.casos .ad-quadro{aspect-ratio:auto;flex:1;min-height:0}
+.casos .ad:not(.is-ativo) .ad-quadro{cursor:pointer}
+.casos .ad:not(.is-ativo) .ad-linha,.casos .ad:not(.is-ativo) .ad-rot{opacity:0}
+.casos .ad-linha{transition:opacity .4s}
+.casos .ad:not(.is-ativo) .ad-range{pointer-events:none;visibility:hidden}
+.casos .ad-quadro img{transition:filter .5s}
+.casos .ad:not(.is-ativo) .ad-quadro img{filter:brightness(.88) saturate(.9)}
+.casos .ad:not(.is-ativo):hover .ad-quadro img{filter:none}
+.casos .ad figcaption{white-space:nowrap;overflow:hidden}
+.casos .ad figcaption span{overflow:hidden;text-overflow:ellipsis}
+/* Antes e depois: slider de comparação */
+.ad{margin:0;display:grid;gap:var(--espaco-4)}
+.ad-quadro{position:relative;aspect-ratio:3 / 2;border-radius:var(--raio-md);overflow:hidden;background:var(--fundo-suave);box-shadow:0 24px 48px -28px rgba(22,36,42,.45);isolation:isolate;touch-action:pan-y}
+.ad-quadro img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;user-select:none;-webkit-user-drag:none}
+.ad-antes{position:absolute;inset:0;clip-path:inset(0 calc(100% - var(--pos)) 0 0)}
+.ad-linha{position:absolute;z-index:2;top:0;bottom:0;left:var(--pos);width:2px;margin-left:-1px;background:#fff;box-shadow:0 0 12px rgba(0,0,0,.25);pointer-events:none}
+.ad-alca{position:absolute;top:50%;left:50%;width:46px;height:46px;margin:-23px 0 0 -23px;border-radius:50%;display:grid;place-items:center;color:#fff;
+  background:rgba(22,36,42,.35);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border:2px solid #fff;box-shadow:0 6px 18px rgba(0,0,0,.3);transition:transform .25s}
+.ad-alca svg{width:22px;height:22px}
+.ad-quadro:hover .ad-alca,.ad-range:focus-visible ~ .ad-linha .ad-alca{transform:scale(1.1)}
+.ad-rot{position:absolute;z-index:1;top:50%;transform:translateY(-50%);padding:6px 12px;border-radius:var(--raio-pilula);font-size:13px;font-weight:600;letter-spacing:.02em;color:#fff;background:rgba(22,36,42,.5);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);pointer-events:none;transition:opacity .25s}
+.ad-rot-antes{left:var(--espaco-4)}
+.ad-rot-depois{right:var(--espaco-4)}
+.ad[data-lado="antes"] .ad-rot-depois,.ad[data-lado="depois"] .ad-rot-antes{opacity:0}
+.ad-range{position:absolute;z-index:3;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize;-webkit-appearance:none;appearance:none;background:transparent}
+.ad-range::-webkit-slider-thumb{-webkit-appearance:none;width:2px;height:100%}
+.ad-range::-moz-range-thumb{width:2px;height:100%;border:0}
+.ad-quadro:has(.ad-range:focus-visible){outline:2px solid var(--foco);outline-offset:3px}
+.ad figcaption{display:flex;justify-content:space-between;align-items:baseline;gap:var(--espaco-3)}
+.ad figcaption b{font-family:var(--font-display);font-size:20px;font-weight:500;letter-spacing:-.015em}
+.ad figcaption span{font-size:14px;color:var(--texto-suave)}
+.ad-vazio .ad-quadro{display:grid;place-items:center;text-align:center;box-shadow:none;border:1.5px dashed var(--linha)}
+.ad-vazio p{margin:0;font-size:14px;color:var(--texto-suave)}
+.caso-legenda{margin:var(--espaco-4) 0 0;font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;color:var(--texto-suave)}
+.duvidas{display:grid;grid-template-columns:1fr 1.4fr;gap:var(--espaco-8);align-items:start}
+.duvidas .arco-secao-topo{margin:0}
+.depos-placa{padding-left:0;padding-right:0}
+.depos-placa .arco-secao-topo{padding:0 var(--espaco-8);max-width:var(--grade-info);margin-left:auto;margin-right:auto;margin-bottom:var(--espaco-6)}
+.arcos-faixa{display:block;width:100%;height:120px;border-radius:var(--raio-md)}
+/* Rodapé: símbolo da marca ao fundo, cartão de vidro com o CTA, ícones em menta, logo negativo na base */
+.rodape{position:relative;overflow:hidden;isolation:isolate;background:radial-gradient(70% 90% at 85% 110%,rgba(47,93,87,.55),transparent 70%),var(--grafite)}
+.rodape-marca{position:absolute;z-index:-1;right:-4%;bottom:-18%;width:min(760px,52vw);height:auto;opacity:.16;pointer-events:none}
+.rodape-chamada{display:grid;gap:var(--espaco-4)}
+.rodape .arco-titulo span{opacity:1;color:rgba(245,248,247,.62)}
+.rodape .arco-titulo em{font-style:normal;color:var(--marca-suave);background:linear-gradient(var(--destaque),var(--destaque)) left 94%/100% 3px no-repeat;padding-bottom:4px}
+.rodape-cartao{display:grid;gap:var(--espaco-5);justify-items:start;padding:var(--espaco-6);border-radius:var(--raio-lg);background:linear-gradient(160deg,rgba(245,248,247,.09),rgba(245,248,247,.03));border:1px solid rgba(207,232,223,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 30px 60px -40px #000;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.rodape-cartao-texto{margin:0;font-size:18px;line-height:1.55;color:rgba(245,248,247,.82);max-width:36ch}
+.rodape-passos{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:var(--espaco-2) var(--espaco-5);font-size:13.5px;color:rgba(245,248,247,.66)}
+.rodape-passos li{display:inline-flex;align-items:center;gap:8px}
+.rodape-passos li::before{content:"";width:9px;height:6px;border:1.8px solid var(--destaque);border-top:0;border-radius:0 0 6px 6px;margin-top:-3px}
+.rodape .arco-final-info{border-top-color:rgba(207,232,223,.14)}
+.rodape .arco-final-info > div{display:flex;gap:var(--espaco-4);align-items:flex-start}
+.rodape .arco-final-info p{margin:0;line-height:1.6}
+.rodape .arco-final-info b{opacity:1;color:var(--marca-suave);font-size:12.5px;letter-spacing:.02em}
+.rodape .arco-final-info a{text-underline-offset:3px;transition:color .3s}
+.rodape .arco-final-info a:hover{color:var(--marca-suave)}
+.rodape-ico{flex:none;width:40px;height:40px;border-radius:12px;display:grid;place-items:center;color:var(--marca-suave);background:rgba(207,232,223,.08);border:1px solid rgba(207,232,223,.14)}
+.rodape-ico svg{width:18px;height:18px}
+.rodape-ico{position:relative}
+.rodape-end .rodape-ico::after{content:"";position:absolute;inset:-1px;border-radius:inherit;border:1.5px solid var(--destaque);opacity:0;pointer-events:none}
+.rodape-end:hover .rodape-ico{animation:pino-pula .6s cubic-bezier(.22,1,.36,1);color:var(--destaque)}
+.rodape-end:hover .rodape-ico::after{animation:pino-anel 1.8s cubic-bezier(.22,1,.36,1) .35s infinite}
+.rodape-end .rodape-ico{transition:color .4s ease}
+@keyframes pino-pula{40%{transform:translateY(-5px)}70%{transform:translateY(1px)}}
+@keyframes pino-anel{0%{opacity:.9;transform:scale(.7)}100%{opacity:0;transform:scale(1.8)}}
+@media (prefers-reduced-motion:reduce){.rodape-end .rodape-ico,.rodape-end .rodape-ico::after{animation:none!important}}
+.rodape-base{display:grid;grid-template-columns:auto 1fr;gap:var(--espaco-7);align-items:center;padding-top:var(--espaco-6);border-top:1px solid rgba(207,232,223,.1)}
+.rodape-logo{display:inline-flex;align-items:center;gap:12px;color:var(--sobre-grafite);text-decoration:none}
+.rodape-logo svg{width:44px;height:38px}
+.rodape-logo span{display:grid;line-height:1}
+.rodape-logo strong{font-family:var(--font-display);font-weight:800;font-size:26px;letter-spacing:-.03em}
+.rodape-logo small{font-family:var(--font-mono);font-size:8.5px;letter-spacing:.3em;color:var(--marca-suave);margin-top:4px}
+.rodape-legal{display:grid;gap:var(--espaco-3)}
+.rodape .arco-legal{opacity:.6}
+.rodape-autor{justify-self:end;display:inline-flex;align-items:center;gap:14px;padding:8px 8px 8px 20px;border-radius:var(--raio-pilula);border:1px solid rgba(207,232,223,.18);color:var(--sobre-grafite);text-decoration:none;transition:border-color .45s ease,background-color .45s ease}
+.rodape-autor-por{font-size:13px;color:rgba(245,248,247,.55)}
+.rodape-autor strong{font-family:var(--font-display);font-weight:800;font-size:17px;letter-spacing:.06em}
+.rodape-autor-seta{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:rgba(207,232,223,.12);color:var(--marca-suave);transition:transform .45s ease,background-color .45s ease}
+.rodape-autor-seta svg{width:13px;height:13px}
+.rodape-autor strong{position:relative;overflow:hidden;padding:2px 0}
+.rodape-autor strong::after{content:"";position:absolute;inset:0 auto 0 0;width:45%;background:linear-gradient(100deg,transparent,rgba(227,160,58,.55),transparent);translate:-120%;animation:autor-brilho 6s cubic-bezier(.45,0,.55,1) 2s infinite}
+@keyframes autor-brilho{0%{translate:-120%}35%,100%{translate:260%}}
+.rodape-autor-seta{overflow:hidden}
+.rodape-autor-seta svg{animation:autor-seta 6s cubic-bezier(.6,0,.2,1) 2.4s infinite}
+@keyframes autor-seta{0%{translate:0}7%{translate:150% -150%}7.01%{translate:-150% 150%}14%,100%{translate:0}}
+.rodape-autor:hover .rodape-autor-seta svg{animation:autor-seta-hover .6s cubic-bezier(.6,0,.2,1)}
+@keyframes autor-seta-hover{0%{translate:0}49%{translate:150% -150%}50%{translate:-150% 150%}100%{translate:0}}
+@media (prefers-reduced-motion:reduce){.rodape-autor strong::after,.rodape-autor-seta svg{animation:none!important}}
+.rodape-autor:hover{border-color:rgba(207,232,223,.4);background:rgba(207,232,223,.05)}
+.rodape-autor:hover .rodape-autor-seta{background:rgba(207,232,223,.2)}
+@media (max-width:760px){.rodape{padding-bottom:96px}.rodape-marca{width:120vw;right:-30%;bottom:-6%;opacity:.1}.rodape-cartao{padding:var(--espaco-5)}.rodape-base{grid-template-columns:1fr;gap:var(--espaco-5)}.rodape-autor{justify-self:start}}
+.arco-zap{display:none}
+.arco-menu-links{gap:var(--espaco-1)}
+.arco-menu-links a{position:relative;border-bottom:0;padding:9px 16px;border:1px solid transparent;border-radius:var(--raio-sm);color:var(--texto-suave);transition:color .25s,border-color .25s,background-color .25s}
+.arco-menu-links a::after{content:"";position:absolute;left:14px;right:14px;bottom:-1px;height:2px;border-radius:2px;background:var(--marca);transform:scaleX(0);transform-origin:right;transition:transform .35s cubic-bezier(.65,0,.35,1)}
+.arco-menu-links a:hover,.arco-menu-links a:focus-visible,.arco-menu-links a[aria-current]{color:var(--texto);border-color:var(--linha-forte);background:rgba(255,255,255,.4)}
+.arco-menu-links a:hover::after,.arco-menu-links a:focus-visible::after,.arco-menu-links a[aria-current]::after{transform:scaleX(1);transform-origin:left}
+@media (prefers-reduced-motion:reduce){.arco-menu-links a::after{transition:none}}
+@media (max-width:1000px){.como-grade{grid-template-columns:minmax(0,1fr);gap:var(--espaco-7)}.confianca-foto{--ini:.72}.casos{height:auto;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none}.casos::-webkit-scrollbar{display:none}.casos > .ad,.casos > .ad.is-ativo{flex:0 0 62%;scroll-snap-align:start}.casos .ad-quadro{flex:none;aspect-ratio:4 / 3}.grade-4{grid-template-columns:repeat(2,minmax(0,1fr))}.quem{grid-template-columns:260px 1fr;gap:var(--espaco-6)}}
+@media (max-width:1180px){
+.hero .hero-titulo{font-size:64px}
+.hero-grade{column-gap:var(--espaco-6)}
+.hero-avaliacao{left:-64px;width:260px}
+.hero-avaliacao blockquote{font-size:14.5px}
+.hero-midia{width:400px;min-height:520px}
+}
+@media (max-width:760px){
+.dor h3{font-size:24px}
+.dor-foto{aspect-ratio:4 / 3}
+.grade-3,.grade-4,.grade-2,.quem,.duvidas{grid-template-columns:minmax(0,1fr)}
+.quem .arco-foto{max-width:300px}
+.quem-frase{font-size:24px}
+.casos > .ad,.casos > .ad.is-ativo{flex:0 0 84%}
+.casos-topo{flex-direction:column;align-items:flex-start;margin-bottom:var(--espaco-6)}
+.casos-seta{width:46px;height:46px}
+.ad figcaption{flex-direction:column;gap:2px}
+.ad figcaption b{font-size:18px}
+.arco-cartao-foto{aspect-ratio:4 / 5}
+.confianca-foto{--ini:.88;aspect-ratio:16 / 9}
+.confianca-foto img{object-position:50% 40%}
+.depos-placa .arco-secao-topo{padding:0 var(--espaco-5)}
+.arco-zap{display:inline-flex}
+.hero > nav{width:calc(100% - 2 * var(--espaco-3));top:var(--espaco-3);padding-left:var(--espaco-4)}
+.hero{min-height:0;padding-top:0;grid-template-rows:auto;background:var(--fundo)}
+.hero-midia{grid-column:1;grid-row:1;justify-self:stretch;width:100%;height:560px;min-height:0;margin:0}
+.hero-midia::before{display:none}
+.hero-foto{border-radius:0;-webkit-mask-image:linear-gradient(to bottom,#000 46%,rgba(0,0,0,.35) 72%,transparent 92%);mask-image:linear-gradient(to bottom,#000 46%,rgba(0,0,0,.35) 72%,transparent 92%)}
+.hero-foto img{height:86%;transform:translateX(-60%)}
+.hero-avaliacao{display:none}
+.hero-grade{padding:0;grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto auto}
+.hero-texto{grid-row:2;position:relative;z-index:1;margin-top:-180px;padding:0 var(--espaco-5) var(--espaco-6);gap:var(--espaco-4)}
+.hero .hero-titulo{font-size:40px}
+.hero .arco-apoio{font-size:17px}
+.hero-chip{font-size:11.5px;letter-spacing:.03em}
+.hero-h1{gap:var(--espaco-4)}
+.hero-logo svg{width:120px;height:29px}
+.hero-logo .logo-sub{display:none}
+.hero > nav{grid-template-columns:1fr auto auto;column-gap:var(--espaco-2);padding:var(--espaco-2) var(--espaco-2) var(--espaco-2) var(--espaco-4)}
+.hero > nav > .arco-btn{display:inline-flex;min-height:44px;padding:4px 4px 4px 16px;gap:var(--espaco-2);font-size:14px}
+.hero > nav > .arco-btn .arco-btn-icone{width:34px;height:34px}
+.hero > nav .menu-btn{padding:0 12px 0 14px;gap:6px;font-size:14px}
+.so-desk{display:none}
+.hero > nav{display:flex;justify-content:space-between;align-items:center}
+.hero > nav .arco-menu-links{position:absolute}
+/* logo recortado no fim visível de "arco" para o Menu ficar no meio exato entre o logo e o botão */
+.hero > nav .hero-logo{overflow:hidden;width:57px;box-sizing:content-box;flex:none}
+.hero > nav .hero-logo svg{flex:none;max-width:none}
+.hero > nav .hero-logo{justify-self:start}
+.hero > nav > .arco-btn{justify-self:end}
+.hero > nav .menu-btn{justify-self:center;border:0;background:none;padding:0 8px;gap:8px;font-size:15px;font-weight:500;color:var(--texto)}
+.hero > nav .menu-btn svg{width:18px;height:18px}
+.hero > nav .menu-btn .tres path{transition:transform .35s cubic-bezier(.22,1,.36,1);transform-origin:center}
+.hero > nav .hero-logo svg{width:100px;height:24px}
+.hero > nav{column-gap:6px}
+.hero > nav{align-items:center;padding:6px;min-height:0}
+.hero > nav .hero-logo{padding-left:8px}
+.hero > nav > *{align-self:center}
+.hero > nav .hero-logo{display:flex;align-items:center}
+.hero > nav .menu-btn,.hero > nav > .arco-btn{height:44px;min-height:44px;box-sizing:border-box}
+@media (max-width:360px){.hero > nav > .arco-btn{padding-left:12px;font-size:13px}.hero > nav > .arco-btn .arco-btn-icone{width:30px;height:30px}.hero > nav .hero-logo{padding-left:4px}}
+@media (max-width:360px){.hero > nav .menu-btn{font-size:0;gap:0;padding:0;width:44px;justify-content:center}}
+.menu-btn{display:inline-flex}
+.hero > nav.is-aberto .arco-menu-links{display:flex;flex-direction:column;gap:2px;position:absolute;top:calc(100% + 8px);left:0;right:0;padding:var(--espaco-3);background:var(--fundo-elevado);border:1px solid var(--linha);border-radius:var(--raio-md);box-shadow:var(--sombra-flutuante)}
+.hero > nav.is-aberto .arco-menu-links a{padding:14px 16px;font-size:17px;color:var(--texto)}
+.hero > nav.is-aberto .arco-menu-links a::after{display:none}
+.arco-zap{opacity:0;transform:translateY(16px);pointer-events:none;transition:opacity .3s,transform .3s}
+.arco-zap.is-visivel{opacity:1;transform:none;pointer-events:auto}
+}
+</style>
+<link rel="preload" as="image" type="image/webp" imagesrcset="../design-system/project/assets/Fotos/hero-doutora-900.webp 900w, ../design-system/project/assets/Fotos/hero-doutora-1400.webp 1400w, ../design-system/project/assets/Fotos/hero-doutora-2000.webp 2000w" imagesizes="(max-width: 760px) 560px, 1200px" fetchpriority="high">
+<script>
+/* Medição: troque pelos IDs reais do cliente. Com IDs de exemplo, nada é enviado (modo demonstração, só aparece no console). */
+window.ARCO_MEDICAO = { ga4: 'G-XXXXXXXXXX', pixel: '000000000000000' };
+</script>
+</head>
+<body>
+<div class="intro" aria-hidden="true">
+  <div class="intro-marca">
+    <svg viewBox="0 0 64 56"><path pathLength="1" d="M8 8 C8 40 20 50 32 50 C44 50 56 40 56 8" fill="none" stroke="#CFE8DF" stroke-width="6" stroke-linecap="round"/><path pathLength="1" d="M21 8 C21 28 26 35 32 35 C38 35 43 28 43 8" fill="none" stroke="#E3A03A" stroke-width="4.4" stroke-linecap="round"/></svg>
+    <span class="intro-nome">arco</span>
+    <span class="intro-sub">ODONTOLOGIA</span>
+    <span class="intro-linha"></span>
+  </div>
+</div>
+<script>
+(function(){ var h=document.documentElement; if(!h.classList.contains('intro-on')) return;
+  var fim=function(){ h.classList.remove('intro-on'); };
+  setTimeout(fim, 2750);
+  document.querySelector('.intro').addEventListener('animationend', function(e){ if(e.animationName==='intro-sai') fim(); });
+})();
+</script>
+<main class="mesa" id="topo">
+
+  <section class="hero" aria-label="Apresentação" id="hero">
+    <nav class="arco-menu" aria-label="Principal">
+      <a class="arco-menu-logo hero-logo" href="#topo"><svg viewBox="0 0 330 80" width="168" height="41" role="img" aria-label="Arco Odontologia"><g transform="translate(0 8) scale(1.125 1.1428)"><path class="logo-arco1" pathLength="1" d="M8 8 C8 40 20 50 32 50 C44 50 56 40 56 8" fill="none" stroke="#2F5D57" stroke-width="7" stroke-linecap="round"/><path class="logo-arco2" pathLength="1" d="M21 8 C21 28 26 35 32 35 C38 35 43 28 43 8" fill="none" stroke="#E3A03A" stroke-width="5" stroke-linecap="round"/></g><text class="logo-nome" x="88" y="50" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="46" letter-spacing="-1.6" fill="#16242A">arco</text><text x="91" y="70" font-family="IBM Plex Mono, monospace" font-size="11.5" letter-spacing="4.2" fill="#2F5D57" class="logo-sub">ODONTOLOGIA</text></svg></a>
+      <div class="arco-menu-links" id="menu-links"><a href="#tratamentos">Tratamentos</a><a href="#como-funciona">Como funciona</a><a href="#equipe">Equipe</a><a href="#duvidas">Dúvidas</a></div>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-links">Menu<svg class="tres" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M8 12h12M4 17h16"/></svg><svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      <a class="arco-btn arco-btn-zap" href="https://wa.me/5516900000000?text=Ol%C3%A1%21%20Vi%20o%20site%20da%20Arco%20e%20quero%20agendar%20minha%20avalia%C3%A7%C3%A3o%20com%20escaneamento%203D.%20%5Bmenu%5D" target="_blank" rel="noopener"><span>Agendar<span class="so-desk"> avaliação</span></span><span class="arco-btn-icone" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></span></a>
+    </nav>
+    <div class="hero-grade">
+      <div class="hero-texto">
+        <h1 class="hero-h1"><span class="arco-titulo hero-titulo">Todo sorriso tem um desenho. <span>O seu, você vê antes de começar.</span></span></h1>
+        <p class="arco-apoio">Na primeira consulta, o escaneamento 3D mostra na tela como vai ficar. Você sai com o plano, o prazo e o valor por escrito.</p>
+        <div class="arco-hero-acoes">
+          <a class="arco-btn arco-btn-zap" href="https://wa.me/5516900000000?text=Ol%C3%A1%21%20Vi%20o%20site%20da%20Arco%20e%20quero%20agendar%20minha%20avalia%C3%A7%C3%A3o%20com%20escaneamento%203D.%20%5Bhero%5D" target="_blank" rel="noopener">Agendar minha avaliação<span class="arco-btn-icone" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18.5V7a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H8z"></path><path d="M8.5 9.5h7M8.5 12.5h4"></path></svg></span></a>
+          <a class="arco-btn arco-btn-contorno" href="#tratamentos">Ver tratamentos</a>
+        </div>
+        <ul class="hero-selos"><li class="local"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Jardim Botânico, Ribeirão Preto</li><li>Planejamento digital 3D</li><li>Sedação consciente</li></ul>
+      </div>
+      <div class="hero-midia">
+        <figure class="hero-foto"><picture><source type="image/webp" srcset="../design-system/project/assets/Fotos/hero-doutora-900.webp 900w, ../design-system/project/assets/Fotos/hero-doutora-1400.webp 1400w, ../design-system/project/assets/Fotos/hero-doutora-2000.webp 2000w" sizes="(max-width: 760px) 560px, 1200px"><img sizes="(max-width: 760px) 560px, 1200px" src="../design-system/project/assets/Fotos/hero-doutora.jpg" alt="Dra. Lívia Andrade, de jaleco branco e scrub verde-azulado, sorrindo" width="2400" height="1600" fetchpriority="high" decoding="async"></picture></figure>
+        <aside class="hero-avaliacao" aria-label="Avaliação de paciente no Google">
+          <div class="hero-avaliacao-topo"><span role="img" aria-label="5 de 5 estrelas">★★★★★</span><b>4,9</b></div>
+          <blockquote>Vi na tela como ia ficar antes de começar. As lentes ficaram com cara de dente mesmo.</blockquote>
+          <div class="arco-depo-autor"><img loading="lazy" decoding="async" src="../design-system/project/assets/Fotos/depo-marcia.webp" alt=""><div><b>Márcia L.</b><span>Google</span></div></div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="arco-placa arco-placa-branca" aria-labelledby="t-para-quem">
+    <div class="conteudo">
+      <div class="arco-secao-topo">
+        <p class="arco-rotulo">Para quem é</p>
+        <h2 class="arco-titulo" id="t-para-quem">Cada sorriso chega com uma história. <span>A gente começa ouvindo a sua.</span></h2>
+      </div>
+      <div class="grade-3 dores">
+        <article class="dor"><figure class="dor-foto"><img loading="lazy" decoding="async" src="../design-system/project/assets/Fotos/dor-protese.webp" alt="Homem de óculos olhando para cima, pensativo" style="object-position:62% 30%"></figure><div class="dor-corpo"><h3>Usa prótese que solta?</h3><p>Com implantes, os dentes ficam fixos e você volta a mastigar sem medo.</p><a class="arco-link dor-link" href="#tratamentos">Ver dentadura fixa</a></div></article>
+        <article class="dor"><figure class="dor-foto"><img loading="lazy" decoding="async" src="../design-system/project/assets/Fotos/hero-casal.webp" alt="Casal de cerca de 60 anos, abraçado e sorrindo" style="object-position:58% 35%"></figure><div class="dor-corpo"><h3>Perdeu um dente?</h3><p>Um implante repõe o dente que falta, com uma coroa na cor dos seus, sem mexer nos vizinhos.</p><a class="arco-link dor-link" href="#tratamentos">Ver implante unitário</a></div></article>
+        <article class="dor"><figure class="dor-foto"><img loading="lazy" decoding="async" src="../design-system/project/assets/Fotos/dor-sorriso.webp" alt="Mulher de cabelo curto sorrindo, de blusa clara" style="object-position:64% 30%"></figure><div class="dor-corpo"><h3>Quer um sorriso natural?</h3><p>Lentes na cor e no formato do seu rosto, sem branco artificial.</p><a class="arco-link dor-link" href="#tratamentos">Ver lentes de contato</a></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="arco-placa" id="tratamentos" aria-labelledby="t-trat">
+    <div class="conteudo">
+      <div class="arco-secao-topo is-lado">
+        <div style="display: grid; gap: var(--espaco-4)"><p class="arco-rotulo">Tratamentos</p><h2 class="arco-titulo" id="t-trat">Quatro caminhos. <span>Um plano feito para você.</span></h2></div>
+        <p class="arco-apoio">Na avaliação, a doutora explica o que faz sentido para o seu caso, e você decide com calma.</p>
+      </div>
+      <div class="grade-4 trat-galeria">
+        <article class="arco-cartao arco-trat"><div class="arco-trat-foto"><img loading="lazy" decoding="async" src="../design-system/project/assets/Fotos/implante-modelo.webp" alt="Modelo de arcada mostrando um implante"></div><div class="arco-trat-corpo"><h3>Implante unitário</h3><p>Repõe um dente perdido com uma raiz de titânio e uma coroa na cor dos seus dentes.</p><a class="arco-link" href="https://wa.me/5516900000000?text=Ol%C3%A1%21%20Vi%20o%20site%20da%20Arco%20e%20quero%20saber%20mais%20sobre%20implante%20unit%C3%A1rio.%20%5Btrat-implante%5D" target="_blank" rel="noopener">Saiba mais</a></div></article>
+        <article class="arco-cartao arco-trat"><div class="arco-trat-foto"><img loading="lazy" decoding="async" src="../design-system/project/assets/Fotos/trat-implante.webp" alt="Paciente de cerca de 60 anos sorrindo na cadeira"></div><div class="arco-trat-corpo"><h3>Dentadura fixa</h3><p>Uma arcada inteira presa em implantes, para quem quer deixar a prótese móvel para trás.</p><a class="arco-link" href="https://wa.me/5516900000000?text=Ol%C3%A1%21%20Vi%20o%20site%20da%20Arco%20e%20quero%20saber%20mais%20sobre%20dentadura%20fixa%20%28protocolo%29.%20%5Btrat-protocolo%5D" target="_blank" rel="noopener">Saiba mais</a></div></article>
+        <article class="arco-cartao arco-trat"><div class="arco-trat-foto"><img loading="lazy" decoding="async" src="../design-system/project/assets/Fotos/trat-lentes.webp" alt="Sorriso natural em close"></div><div class="arco-trat-corpo"><h3>Lentes de contato dental</h3><p>Lâminas finas que corrigem cor e formato, desenhadas para o seu rosto.</p><a class="arco-link" href="https://wa.me/5516900000000?text=Ol%C3%A1%21%20Vi%20o%20site%20da%20Arco%20e%20quero%20saber%20mais%20sobre%20lentes%20de%20contato%20dental.%20%5Btrat-lentes%5D" target="_blank" rel="noopener">Saiba mais</a></div></article>
+        <article class="arco-cartao arco-trat"><div class="arco-trat-foto"><img loading="lazy" decoding="async" src="../design-system/project/assets/Fotos/trat-clareamento.webp" alt="Dentista comparando a escala de cor com os dentes da paciente"></div><div class="arco-trat-corpo"><h3>Clareamento</h3><p>Alguns tons mais claros, com a cor escolhida junto com você.</p><a class="arco-link" href="https://wa.me/5516900000000?text=Ol%C3%A1%21%20Vi%20o%20site%20da%20Arco%20e%20quero%20saber%20mais%20sobre%20clareamento.%20%5Btrat-clareamento%5D" target="_blank" rel="noopener">Saiba mais</a></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="arco-placa arco-placa-branca" id="como-funciona" aria-labelledby="t-como">
+    <div class="conteudo">
+      <div class="arco-secao-topo is-lado">
+        <div style="display: grid; gap: var(--espaco-4)"><p class="arco-rotulo">Como funciona</p><h2 class="arco-titulo" id="t-como">Cada etapa explicada. <span>Antes de acontecer.</span></h2></div>
+        <p class="arco-apoio">Da primeira conversa ao sorriso pronto, você sabe o que vem a seguir e quanto vai custar.</p>
+      </div>
+      <div class="como-grade">
+      <ol class="arco-etapas">
+        <li class="arco-etapa is-feita"><small></small><span class="etapa-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path pathLength="1" d="M4 18.5V7a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H8z"/><path pathLength="1" d="M8.5 9.5h7M8.5 12.5h4"/></svg></span><h3>Avaliação</h3><p>Conversa sem pressa sobre o que te incomoda.</p></li>
+        <li class="arco-etapa is-atual"><small></small><span class="etapa-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path pathLength="1" d="M4 8V5.5A1.5 1.5 0 0 1 5.5 4H8M16 4h2.5A1.5 1.5 0 0 1 20 5.5V8M20 16v2.5a1.5 1.5 0 0 1-1.5 1.5H16M8 20H5.5A1.5 1.5 0 0 1 4 18.5V16"/><path pathLength="1" d="M7 12h10"/></svg></span><h3>Escaneamento 3D</h3><p>Um scanner faz a imagem da sua boca, sem massinha.</p></li>
+        <li class="arco-etapa"><small></small><span class="etapa-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path pathLength="1" d="M7 3h7l4 4v14H7z"/><path pathLength="1" d="M14 3v4h4M10 12h5M10 16h4"/></svg></span><h3>Plano por escrito</h3><p>Você vê a simulação e leva o plano, o prazo e o valor.</p></li>
+        <li class="arco-etapa"><small></small><span class="etapa-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path pathLength="1" d="M8 4C5.5 4 4 6 4 8.5c0 3 1.5 4.5 2 7.5.4 2.6 1 4 2 4s1.3-2 2-4.5c.3-1 .7-1.5 2-1.5s1.7.5 2 1.5c.7 2.5 1 4.5 2 4.5s1.6-1.4 2-4c.5-3 2-4.5 2-7.5C20 6 18.5 4 16 4c-1.6 0-2.5.8-4 .8S9.6 4 8 4z"/></svg></span><h3>Tratamento</h3><p>Com sedação consciente, se você preferir.</p></li>
+      </ol>
+      <figure class="arco-cartao-foto como-foto"><img loading="lazy" decoding="async" src="../design-system/project/assets/Fotos/planejamento-tela.webp" alt="Tela do computador mostrando o escaneamento 3D da arcada dentária"><figcaption><b>Planejamento digital</b><span>Você vê o escaneamento da sua boca na tela, ao lado da doutora.</span></figcaption></figure>
+      </div>
+      <div class="acao-secao">
+        <a class="arco-btn arco-btn-zap" href="https://wa.me/5516900000000?text=Ol%C3%A1%21%20Vi%20o%20site%20da%20Arco%20e%20quero%20agendar%20minha%20avalia%C3%A7%C3%A3o%20com%20escaneamento%203D.%20%5Bcomo-funciona%5D" target="_blank" rel="noopener">Agendar minha avaliação<span class="arco-btn-icone" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18.5V7a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H8z"></path><path d="M8.5 9.5h7M8.5 12.5h4"></path></svg></span></a>
+        <ul class="arco-selos"><li>Sedação consciente</li><li>Plano e valor por escrito</li><li>Sábado de manhã</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="arco-placa palavras" aria-labelledby="t-palavras">
+    <div class="conteudo">
+      <p class="arco-rotulo">Nosso combinado com você</p>
+      <h2 class="sr-only" id="t-palavras">Sem pressa, sem susto, com plano</h2>
+      <ol class="palavras-lista">
+        <li><span class="palavras-frase">Sem pressa.</span><p>A primeira consulta dura cerca de uma hora. Dá tempo de contar o que incomoda e tirar todas as dúvidas.</p></li>
+        <li><span class="palavras-frase">Sem susto.</span><p>Anestesia bem feita e sedação consciente para quem tem medo. Você sabe antes o que vai sentir.</p></li>
+        <li><span class="palavras-frase tom">Com plano.</span><p>Você sai com o plano, o prazo e o valor por escrito. Nada muda no meio do caminho sem você saber.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="arco-placa confianca" aria-labelledby="t-confianca">
+    <div class="conteudo">
+      <div class="arco-secao-topo is-lado">
+        <div style="display: grid; gap: var(--espaco-4)"><p class="arco-rotulo">No fim, o espelho</p><h2 class="arco-titulo" id="t-confianca">O momento em que <span>você se vê de novo.</span></h2></div>
+        <p class="arco-apoio">O tratamento só termina quando você aprova o resultado no espelho, ao lado da doutora.</p>
+      </div>
+      <!-- Foto: começa com metade do tamanho e cresce até 1440 conforme a rolagem, sem travar a página -->
+      <figure class="arco-cartao-foto confianca-foto"><img loading="lazy" decoding="async" srcset="../design-system/project/assets/Fotos/confianca-1200.webp 1200w, ../design-system/project/assets/Fotos/confianca-1920.webp 1920w" sizes="(max-width: 1440px) 100vw, 1440px" src="../design-system/project/assets/Fotos/confianca-1920.webp" width="1920" height="1080" alt="Doutora de jaleco verde-água sorrindo ao lado da paciente, que se olha no espelho na cadeira do consultório"></figure>
+      <ul class="arco-selos confianca-selos"><li>Plano e valor por escrito</li><li>Sedação consciente</li><li>Garantia do tratamento</li></ul>
+    </div>
+  </section>
+
+  <section class="arco-placa" aria-labelledby="t-casos">
+    <div class="conteudo">
+      <div class="casos-topo">
+        <div class="arco-secao-topo"><p class="arco-rotulo">Antes e depois</p><h2 class="arco-titulo" id="t-casos">A transformação no sorriso. <span>E no jeito de sorrir.</span></h2>
+        <p class="arco-apoio">Passe o mouse ou toque em cada caso para abrir. Depois, arraste a linha para comparar.</p>
+        </div>
+        <div class="casos-setas"><button class="casos-seta" type="button" data-casos="-1" aria-label="Caso anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button><button class="casos-seta" type="button" data-casos="1" aria-label="Próximo caso"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button></div>
+      </div>
+      <div class="casos">
+        <figure class="ad" style="--pos:50%">
+          <div class="ad-quadro">
+            <img class="ad-depois" src="../design-system/project/assets/Fotos/caso1-depois.webp" alt="Depois: sorriso em close, dentes amarelados e opacos antes e brancos e uniformes depois" loading="lazy" decoding="async" width="1200" height="800">
+            <div class="ad-antes"><img src="../design-system/project/assets/Fotos/caso1-antes.webp" alt="Antes: sorriso em close, dentes amarelados e opacos antes e brancos e uniformes depois" loading="lazy" decoding="async" width="1200" height="800"></div>
+            <span class="ad-rot ad-rot-antes" aria-hidden="true">Antes</span><span class="ad-rot ad-rot-depois" aria-hidden="true">Depois</span>
+            <span class="ad-linha" aria-hidden="true"><span class="ad-alca"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 7 4 12l5.5 5zM14.5 7 20 12l-5.5 5z"/></svg></span></span>
+            <input class="ad-range" type="range" min="0" max="100" value="50" step="1" aria-label="Comparar antes e depois: Lentes de contato dental">
+          </div>
+          <figcaption><b>Lentes de contato dental</b><span>8 lâminas · 3 consultas</span></figcaption>
+        </figure>
+        <figure class="ad" style="--pos:50%">
+          <div class="ad-quadro">
+            <img class="ad-depois" src="../design-system/project/assets/Fotos/caso2-depois.webp" alt="Depois: sorriso de senhora em close, dentes amarelados antes e mais claros depois" loading="lazy" decoding="async" width="1200" height="800">
+            <div class="ad-antes"><img src="../design-system/project/assets/Fotos/caso2-antes.webp" alt="Antes: sorriso de senhora em close, dentes amarelados antes e mais claros depois" loading="lazy" decoding="async" width="1200" height="800"></div>
+            <span class="ad-rot ad-rot-antes" aria-hidden="true">Antes</span><span class="ad-rot ad-rot-depois" aria-hidden="true">Depois</span>
+            <span class="ad-linha" aria-hidden="true"><span class="ad-alca"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 7 4 12l5.5 5zM14.5 7 20 12l-5.5 5z"/></svg></span></span>
+            <input class="ad-range" type="range" min="0" max="100" value="50" step="1" aria-label="Comparar antes e depois: Clareamento">
+          </div>
+          <figcaption><b>Clareamento</b><span>Consultório + caseiro · 3 semanas</span></figcaption>
+        </figure>
+        <figure class="ad" style="--pos:50%">
+          <div class="ad-quadro">
+            <img class="ad-depois" src="../design-system/project/assets/Fotos/caso3-depois.webp" alt="Depois: sorriso de homem em close, dentes manchados antes e claros depois" loading="lazy" decoding="async" width="1200" height="800">
+            <div class="ad-antes"><img src="../design-system/project/assets/Fotos/caso3-antes.webp" alt="Antes: sorriso de homem em close, dentes manchados antes e claros depois" loading="lazy" decoding="async" width="1200" height="800"></div>
+            <span class="ad-rot ad-rot-antes" aria-hidden="true">Antes</span><span class="ad-rot ad-rot-depois" aria-hidden="true">Depois</span>
+            <span class="ad-linha" aria-hidden="true"><span class="ad-alca"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.5 7 4 12l5.5 5zM14.5 7 20 12l-5.5 5z"/></svg></span></span>
+            <input class="ad-range" type="range" min="0" max="100" value="50" step="1" aria-label="Comparar antes e depois: Implante unitário + clareamento">
+          </div>
+          <figcaption><b>Implante unitário + clareamento</b><span>2 etapas · 4 meses</span></figcaption>
+        </figure>
+      </div>
+      <p class="caso-legenda">O RESULTADO VARIA DE PESSOA PARA PESSOA</p>
+    </div>
+  </section>
+
+  <section class="arco-placa arco-placa-branca" id="equipe" aria-labelledby="t-quem">
+    <div class="conteudo">
+      <div class="quem">
+        <figure class="arco-foto"><img loading="lazy" decoding="async" src="../design-system/project/assets/Fotos/doutora.webp" alt="Dra. Lívia Andrade, de jaleco branco e scrub verde-azulado, ajustando os óculos"></figure>
+        <div class="quem-texto">
+          <p class="arco-rotulo" id="t-quem">Quem cuida de você</p>
+          <p class="quem-frase">“Eu explico cada etapa antes de fazer. Você nunca é pego de surpresa.”</p>
+          <p style="margin: 0; color: var(--texto-suave)">Dra. Lívia Andrade, implantodontista, 12 anos em Ribeirão Preto. Cuida de implantes e lentes com planejamento digital e atende cada paciente do começo ao fim do tratamento.</p>
+          <p class="arco-prova-nota" style="margin: 0">RESPONSÁVEL TÉCNICA · CRO-SP 000000</p>
+        </div>
+      </div>
+      <div class="grade-2 quem-fotos">
+        <figure class="arco-cartao-foto"><img loading="lazy" decoding="async" src="../design-system/project/assets/Fotos/equipe.webp" alt="Equipe da clínica reunida no consultório"><figcaption><b>A equipe</b><span>Seis pessoas que te recebem pelo nome, do WhatsApp à cadeira.</span></figcaption></figure>
+        <figure class="arco-cartao-foto"><img loading="lazy" decoding="async" src="../design-system/project/assets/Fotos/consultorio.webp" alt="Consultório claro com cadeira odontológica"><figcaption><b>O consultório</b><span>Três salas no Jardim Botânico, com café e sem pressa.</span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="arco-placa depos-placa" aria-labelledby="t-depos">
+    <div class="arco-secao-topo is-centro">
+      <p class="arco-rotulo">Quem já passou por aqui</p>
+      <h2 class="arco-titulo" id="t-depos">4,9 no Google. <span>Nas palavras de quem sentou na cadeira.</span></h2>
+    </div>
+    <div class="arco-faixa-depos">
+      <div class="arco-faixa-trilho">
+        <article class="arco-depo"><blockquote>Eu tinha pavor de dentista. A doutora explicou cada passo antes e, com a sedação, nem vi o tempo passar.</blockquote><div class="arco-depo-autor"><img loading="lazy" decoding="async" src="../design-system/project/assets/Fotos/depo-roberto.webp" alt=""><div><b>Roberto M.</b><span>Google</span></div><span class="arco-estrelas" aria-label="5 de 5 estrelas">★★★★★</span></div></article>
+        <article class="arco-depo"><blockquote>Vi na tela como ia ficar antes de começar. As lentes ficaram com cara de dente mesmo.</blockquote><div class="arco-depo-autor"><img loading="lazy" decoding="async" src="../design-system/project/assets/Fotos/depo-marcia.webp" alt=""><div><b>Márcia L.</b><span>Google</span></div><span class="arco-estrelas" aria-label="5 de 5 estrelas">★★★★★</span></div></article>
+        <article class="arco-depo"><blockquote>Voltei a comer churrasco sem medo da prótese soltar. Melhor decisão que tomei.</blockquote><div class="arco-depo-autor"><img loading="lazy" decoding="async" src="../design-system/project/assets/Fotos/depo-jorge.webp" alt=""><div><b>Jorge T.</b><span>Google</span></div><span class="arco-estrelas" aria-label="5 de 5 estrelas">★★★★★</span></div></article>
+        <article class="arco-depo"><blockquote>Saí da avaliação com tudo por escrito: plano, prazo e valor. Nada de surpresa no meio do caminho.</blockquote><div class="arco-depo-autor"><span class="arco-iniciais" aria-hidden="true">AS</span><div><b>Antônio S.</b><span>Google</span></div><span class="arco-estrelas" aria-label="5 de 5 estrelas">★★★★★</span></div></article>
+        <article class="arco-depo"><blockquote>Atendimento sem pressa, num sábado de manhã. Explicaram até o que eu não tinha perguntado.</blockquote><div class="arco-depo-autor"><span class="arco-iniciais" aria-hidden="true">HP</span><div><b>Helena P.</b><span>Google</span></div><span class="arco-estrelas" aria-label="5 de 5 estrelas">★★★★★</span></div></article>
+        <div style="display: contents" aria-hidden="true">
+          <article class="arco-depo"><blockquote>Eu tinha pavor de dentista. A doutora explicou cada passo antes e, com a sedação, nem vi o tempo passar.</blockquote><div class="arco-depo-autor"><img loading="lazy" decoding="async" src="../design-system/project/assets/Fotos/depo-roberto.webp" alt=""><div><b>Roberto M.</b><span>Google</span></div><span class="arco-estrelas">★★★★★</span></div></article>
+          <article class="arco-depo"><blockquote>Vi na tela como ia ficar antes de começar. As lentes ficaram com cara de dente mesmo.</blockquote><div class="arco-depo-autor"><img loading="lazy" decoding="async" src="../design-system/project/assets/Fotos/depo-marcia.webp" alt=""><div><b>Márcia L.</b><span>Google</span></div><span class="arco-estrelas">★★★★★</span></div></article>
+          <article class="arco-depo"><blockquote>Voltei a comer churrasco sem medo da prótese soltar. Melhor decisão que tomei.</blockquote><div class="arco-depo-autor"><img loading="lazy" decoding="async" src="../design-system/project/assets/Fotos/depo-jorge.webp" alt=""><div><b>Jorge T.</b><span>Google</span></div><span class="arco-estrelas">★★★★★</span></div></article>
+          <article class="arco-depo"><blockquote>Saí da avaliação com tudo por escrito: plano, prazo e valor. Nada de surpresa no meio do caminho.</blockquote><div class="arco-depo-autor"><span class="arco-iniciais">AS</span><div><b>Antônio S.</b><span>Google</span></div><span class="arco-estrelas">★★★★★</span></div></article>
+          <article class="arco-depo"><blockquote>Atendimento sem pressa, num sábado de manhã. Explicaram até o que eu não tinha perguntado.</blockquote><div class="arco-depo-autor"><span class="arco-iniciais">HP</span><div><b>Helena P.</b><span>Google</span></div><span class="arco-estrelas">★★★★★</span></div></article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="arco-placa arco-placa-branca" id="duvidas" aria-labelledby="t-duvidas">
+    <div class="conteudo">
+      <div class="duvidas">
+        <div class="arco-secao-topo">
+          <p class="arco-rotulo">Dúvidas</p>
+          <h2 class="arco-titulo" id="t-duvidas">Pode perguntar. <span>Estas são as que mais ouvimos.</span></h2>
+          <p class="arco-apoio">Não achou a sua? A recepção responde pelo WhatsApp.</p>
+        </div>
+        <div class="arco-perguntas">
+          <details class="arco-pergunta" open="open"><summary>Dói?</summary><p>A cirurgia é feita com anestesia local, e você pode escolher a sedação consciente para ficar relaxado o tempo todo. Depois, o incômodo costuma ser leve e passa em poucos dias.</p></details>
+          <details class="arco-pergunta"><summary>Quanto tempo leva?</summary><p>Depende do tratamento e do seu caso. As lentes costumam ficar prontas em poucas semanas; o implante precisa de alguns meses para firmar no osso. O prazo do seu plano sai por escrito na avaliação.</p></details>
+          <details class="arco-pergunta"><summary>Quanto custa?</summary><p>Depende do plano de cada pessoa. Na avaliação você recebe o valor por escrito, junto com o plano e o prazo.</p></details>
+          <details class="arco-pergunta"><summary>Aceita convênio?</summary><p>Cada convênio cobre coisas diferentes. Mande uma mensagem para a recepção com o nome do seu plano que ela explica como fica no seu caso.</p></details>
+          <details class="arco-pergunta"><summary>Lente desgasta o dente?</summary><p>Na maioria dos casos o desgaste é mínimo ou nenhum. Você vê a simulação antes e decide.</p></details>
+          <details class="arco-pergunta"><summary>E se eu tiver pouco osso?</summary><p>Em muitos casos dá para preparar o osso antes do implante. Os exames da avaliação mostram o que o seu caso precisa, e a doutora explica as opções com calma.</p></details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="arco-placa arco-placa-escura arco-final rodape" id="agendar">
+    <svg class="rodape-marca" viewBox="0 0 64 56" aria-hidden="true"><path pathLength="1" d="M8 8 C8 40 20 50 32 50 C44 50 56 40 56 8" fill="none" stroke="#CFE8DF" stroke-width="2.2" stroke-linecap="round"/><path pathLength="1" d="M21 8 C21 28 26 35 32 35 C38 35 43 28 43 8" fill="none" stroke="#E3A03A" stroke-width="1.6" stroke-linecap="round"/></svg>
+    <div class="conteudo arco-final">
+      <div class="arco-final-topo">
+        <div class="rodape-chamada"><p class="arco-rotulo">Primeiro passo</p><h2 class="arco-titulo">Seu novo sorriso <span>começa com uma <em>conversa.</em></span></h2></div>
+        <div class="rodape-cartao">
+          <p class="rodape-cartao-texto">Fale com a recepção pelo WhatsApp e marque a sua avaliação.</p>
+          <a class="arco-btn arco-btn-claro" href="https://wa.me/5516900000000?text=Ol%C3%A1%21%20Vi%20o%20site%20da%20Arco%20e%20quero%20agendar%20minha%20avalia%C3%A7%C3%A3o%20com%20escaneamento%203D.%20%5Bfinal%5D" target="_blank" rel="noopener">Agendar minha avaliação<span class="arco-btn-icone" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18.5V7a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H8z"></path><path d="M8.5 9.5h7M8.5 12.5h4"></path></svg></span></a>
+          <ul class="rodape-passos"><li>Avaliação com escaneamento 3D</li><li>Plano e valor por escrito</li></ul>
+        </div>
+      </div>
+      <div class="arco-final-info">
+        <div class="rodape-end"><span class="rodape-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></span><p><b>Endereço</b>R. das Palmeiras, 000 · Jardim Botânico<br>Ribeirão Preto/SP · <a href="https://www.google.com/maps/search/?api=1&amp;query=Ribeir%C3%A3o+Preto+Jardim+Bot%C3%A2nico" target="_blank" rel="noopener">ver no mapa</a></p></div>
+        <div><span class="rodape-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg></span><p><b>Horário</b>Seg a sex, 8h às 19h<br>Sábado, 8h às 12h</p></div>
+        <div><span class="rodape-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18.5V7a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H8z"></path><path d="M8.5 9.5h7M8.5 12.5h4"></path></svg></span><p><b>Contato</b>(16) 9 0000-0000<br>@arcoodontologia</p></div>
+      </div>
+      <div class="rodape-base">
+        <a class="rodape-logo" href="#topo" aria-label="Arco Odontologia, voltar ao topo"><svg viewBox="0 0 64 56" aria-hidden="true"><path d="M8 8 C8 40 20 50 32 50 C44 50 56 40 56 8" fill="none" stroke="#CFE8DF" stroke-width="7" stroke-linecap="round"/><path d="M21 8 C21 28 26 35 32 35 C38 35 43 28 43 8" fill="none" stroke="#E3A03A" stroke-width="5" stroke-linecap="round"/></svg><span><strong>arco</strong><small>ODONTOLOGIA</small></span></a>
+        <div class="rodape-legal">
+          <p class="arco-legal"><span>RESPONSÁVEL TÉCNICA · DRA. LÍVIA ANDRADE · CRO-SP 000000</span><span><a href="#topo">POLÍTICA DE PRIVACIDADE</a> · <button class="cookies-link" type="button" data-cookies="abrir">COOKIES</button></span></p>
+          <p class="arco-legal"><span>ARCO ODONTOLOGIA É UMA MARCA FICTÍCIA DE PORTFÓLIO · NOMES, CRO E NÚMEROS SÃO EXEMPLOS</span></p>
+        </div>
+      </div>
+      <a class="rodape-autor" href="https://wa.me/5581981999794?text=Ol%C3%A1%20Matheus%21%20Vi%20o%20site%20da%20Arco%20Odontologia%20e%20quero%20um%20site%20assim." target="_blank" rel="noopener"><span class="rodape-autor-por">Desenvolvido por</span><strong>MATHEUS</strong><span class="rodape-autor-seta" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 16 16 8M9 8h7v7"/></svg></span></a>
+    </div>
+  </footer>
+</main>
+<section class="cookies" id="cookies" role="dialog" aria-labelledby="cookies-titulo" aria-describedby="cookies-texto" hidden>
+  <h2 id="cookies-titulo">Sua privacidade</h2>
+  <p id="cookies-texto">Usamos cookies para entender como o site é usado e melhorar nossos anúncios. Você escolhe se autoriza. Detalhes na <a href="#topo">política de privacidade</a>.</p>
+  <div class="cookies-acoes">
+    <button class="arco-btn arco-btn-zap" type="button" data-cookies="aceito">Aceitar</button>
+    <button class="arco-btn arco-btn-contorno" type="button" data-cookies="recuso">Só os necessários</button>
+  </div>
+</section>
+<a class="arco-btn arco-btn-zap arco-zap" href="https://wa.me/5516900000000?text=Ol%C3%A1%21%20Vi%20o%20site%20da%20Arco%20e%20quero%20agendar%20minha%20avalia%C3%A7%C3%A3o%20com%20escaneamento%203D.%20%5Bfixo%5D" target="_blank" rel="noopener">Agendar avaliação<span class="arco-btn-icone" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18.5V7a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H8z"></path><path d="M8.5 9.5h7M8.5 12.5h4"></path></svg></span></a>
+<script>
+/* Botão fixo do WhatsApp só aparece depois que o CTA da hero sai da tela */
+(function(){var z=document.querySelector('.arco-zap'),c=document.querySelector('.hero-texto .arco-btn-zap');if(!z||!c||!('IntersectionObserver' in window)){if(z)z.classList.add('is-visivel');return}
+new IntersectionObserver(function(e){z.classList.toggle('is-visivel',!e[0].isIntersecting&&e[0].boundingClientRect.top<0)}).observe(c)})();
+</script>
+<script>
+/* Antes e depois: galeria que abre o caso ativo (mouse, toque ou setas) + comparação arrastável no ativo */
+(function(){
+  var casos = document.querySelector('.casos'); if (!casos) return;
+  var figs = [].slice.call(casos.querySelectorAll('.ad')), n = figs.length, idx = 0, visivel = false;
+  var reduz = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var desk = matchMedia('(min-width: 1001px)'), temHover = matchMedia('(hover: hover)');
+
+  figs.forEach(function(fig, k){
+    var r = fig.querySelector('.ad-range'), raf = 0;
+    fig._por = function(v){ fig.style.setProperty('--pos', v + '%'); fig.dataset.lado = v < 24 ? 'depois' : v > 76 ? 'antes' : ''; r.value = Math.round(v); };
+    fig._para = function(){ cancelAnimationFrame(raf); raf = 0; };
+    fig._dica = function(){
+      if (fig._mexeu || reduz) { fig._por(50); return; }
+      fig._para();
+      var pts = [50, 22, 78, 50], dur = 2200, t0 = null;
+      function ease(t){ return t < .5 ? 4*t*t*t : 1 - Math.pow(-2*t + 2, 3) / 2; }
+      function passo(ts){
+        if (t0 === null) t0 = ts + 350;
+        var t = Math.max(0, Math.min(1, (ts - t0) / dur)), seg = Math.min(pts.length - 2, Math.floor(t * (pts.length - 1)));
+        fig._por((pts[seg] + (pts[seg + 1] - pts[seg]) * ease(t * (pts.length - 1) - seg)).toFixed(2));
+        raf = t < 1 ? requestAnimationFrame(passo) : 0;
+      }
+      fig._por(50); raf = requestAnimationFrame(passo);
+    };
+    r.addEventListener('input', function(){ fig._para(); fig._mexeu = true; fig._por(r.value); });
+    r.addEventListener('pointerdown', function(){ fig._para(); fig._mexeu = true; });
+    // clique/toque num caso fechado abre ele
+    fig.querySelector('.ad-quadro').addEventListener('click', function(){ if (k !== idx) ativar(k); });
+    // mouse em cima (desktop) também abre, com uma pequena pausa para não trocar sem querer
+    var t; fig.addEventListener('mouseenter', function(){ if (!temHover.matches || !desk.matches || k === idx) return; t = setTimeout(function(){ ativar(k); }, 140); });
+    fig.addEventListener('mouseleave', function(){ clearTimeout(t); });
+  });
+
+  function ativar(i, rolar){
+    idx = (i + n) % n;
+    figs.forEach(function(f, k){
+      var on = k === idx, r = f.querySelector('.ad-range');
+      f.classList.toggle('is-ativo', on);
+      r.tabIndex = on ? 0 : -1;
+      if (!on) { f._para(); f._por(0); }
+      else if (visivel) f._dica(); else f._por(50);
+    });
+    if (!desk.matches && rolar !== false) casos.scrollTo({ left: figs[idx].offsetLeft, behavior: reduz ? 'auto' : 'smooth' });
+  }
+
+  document.querySelectorAll('[data-casos]').forEach(function(b){
+    b.addEventListener('click', function(){ ativar(idx + Number(b.getAttribute('data-casos'))); });
+  });
+
+  // no celular, deslizar com o dedo também troca o ativo
+  var tt; casos.addEventListener('scroll', function(){
+    if (desk.matches) return; clearTimeout(tt);
+    tt = setTimeout(function(){
+      var perto = 0, menor = Infinity;
+      figs.forEach(function(f, k){ var d = Math.abs(f.offsetLeft - casos.scrollLeft); if (d < menor) { menor = d; perto = k; } });
+      if (perto !== idx) ativar(perto, false);
+    }, 120);
+  }, { passive: true });
+
+  // a dica (linha indo e voltando) só roda quando a seção aparece na tela
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(es){ var v = es[0].isIntersecting; if (v && !visivel) figs[idx]._dica(); visivel = v; }, { threshold: .4 });
+    io.observe(casos);
+  } else visivel = true;
+
+  ativar(0, false);
+})();
+</script>
+<script>
+/* Menu do celular: abre/fecha, fecha ao escolher um link, com Esc ou tocando fora */
+(function(){var nav=document.querySelector('.hero > nav'),b=nav&&nav.querySelector('.menu-btn');if(!b)return;
+function set(a){nav.classList.toggle('is-aberto',a);b.setAttribute('aria-expanded',a)}
+b.addEventListener('click',function(e){e.stopPropagation();set(!nav.classList.contains('is-aberto'))});
+nav.querySelectorAll('.arco-menu-links a').forEach(function(a){a.addEventListener('click',function(){set(false)})});
+document.addEventListener('click',function(e){if(!nav.contains(e.target))set(false)});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&nav.classList.contains('is-aberto')){set(false);b.focus()}});})();
+</script>
+<script>
+/* LGPD + medição: GA4 e Pixel do Meta só carregam depois do "Aceitar".
+   Evento de conversão: clique em qualquer botão de WhatsApp, com a seção (marcação [hero], [final]...) */
+(function(){
+  var cfg = window.ARCO_MEDICAO || {}, CHAVE = 'arco-cookies', carregou = false;
+  var demo = !cfg.ga4 || /X{4,}/.test(cfg.ga4) || !cfg.pixel || /^0+$/.test(cfg.pixel);
+  var aviso = document.getElementById('cookies');
+  function ler(){ try { return localStorage.getItem(CHAVE); } catch(e){ return null; } }
+  function gravar(v){ try { localStorage.setItem(CHAVE, v); } catch(e){} }
+
+  function carregar(){
+    if (carregou) return; carregou = true;
+    if (demo) { console.info('[medição] modo demonstração: GA4 e Pixel não carregados (IDs de exemplo).'); return; }
+    // GA4
+    var g = document.createElement('script'); g.async = true; g.src = 'https://www.googletagmanager.com/gtag/js?id=' + cfg.ga4; document.head.appendChild(g);
+    window.dataLayer = window.dataLayer || []; window.gtag = function(){ dataLayer.push(arguments); };
+    gtag('js', new Date()); gtag('config', cfg.ga4);
+    // Pixel do Meta
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', cfg.pixel); fbq('track', 'PageView');
+  }
+
+  function escolher(v){ gravar(v); aviso.hidden = true; if (v === 'aceito') carregar(); }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest('[data-cookies]'); if (!b) return;
+    var a = b.getAttribute('data-cookies');
+    if (a === 'abrir') { aviso.hidden = false; aviso.querySelector('button').focus(); } else escolher(a);
+  });
+
+  // clique no WhatsApp = conversão (só é enviado se a pessoa aceitou)
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a[href*="wa.me/"]'); if (!a) return;
+    var m = decodeURIComponent(a.getAttribute('href')).match(/\[([^\]]+)\]/), secao = m ? m[1] : 'outro';
+    if (ler() !== 'aceito') return;
+    if (demo) { console.info('[medição] clique_whatsapp →', secao); return; }
+    if (window.gtag) gtag('event', 'clique_whatsapp', { secao: secao });
+    if (window.fbq) fbq('track', 'Contact', { content_name: secao });
+  });
+
+  var v = ler();
+  if (v === 'aceito') carregar(); else if (!v) aviso.hidden = false;
+})();
+</script>
+<script src="https://unpkg.com/lenis@1.3.4/dist/lenis.min.js" defer></script>
+<script>
+/* Rolagem com inércia na roda do mouse (Lenis). No celular o toque segue nativo.
+   Links internos deslizam até a seção, parando abaixo da nav fixa. */
+window.addEventListener('DOMContentLoaded', function(){
+  if (!window.Lenis || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var lenis = new Lenis({ lerp: 0.09, wheelMultiplier: 1, smoothWheel: true });
+  window.arcoLenis = lenis;
+  (function raf(t){ lenis.raf(t); requestAnimationFrame(raf); })(performance.now());
+  function offset(){ return innerWidth <= 760 ? -84 : -104; }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a[href^="#"]'); if (!a) return;
+    var id = a.getAttribute('href'); var alvo = id === '#topo' || id === '#' ? 0 : document.querySelector(id);
+    if (alvo === null) return;
+    e.preventDefault();
+    lenis.scrollTo(alvo, { offset: alvo === 0 ? 0 : offset(), duration: 1.2 });
+    if (id.length > 1) history.replaceState(null, '', id);
+  });
+  // menu do celular aberto: trava a rolagem por trás
+  var nav = document.querySelector('.hero > nav');
+  if (nav) new MutationObserver(function(){ nav.classList.contains('is-aberto') ? lenis.stop() : lenis.start(); }).observe(nav, { attributes: true, attributeFilter: ['class'] });
+});
+</script>
+<script>
+/* Animações suaves: revelar ao rolar, números contando, perguntas deslizando */
+(function(){
+  if (!document.documentElement.classList.contains('anim')) return;
+
+  // 2. revelar ao rolar, em cascata entre irmãos
+  var alvos = '.arco-placa .arco-secao-topo, .dor, .arco-trat, .arco-etapa, .como-foto, .ad, .quem > .arco-foto, .quem-texto, .quem-fotos > *, .duvidas .arco-secao-topo, .arco-pergunta, .arco-final-topo, .arco-final-info > div, .acao-secao';
+  var lista = [].slice.call(document.querySelectorAll(alvos)).filter(function(el){ return !el.closest('.hero'); });
+  lista.forEach(function(el){
+    var irmaos = [].filter.call(el.parentNode.children, function(c){ return c.matches(alvos); });
+    var i = Math.min(irmaos.indexOf(el), 5);
+    el.style.setProperty('--atraso', (i * 0.09).toFixed(2) + 's');
+    el.classList.add('revela');
+  });
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('is-visivel'); io.unobserve(e.target); } });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.12 });
+  lista.forEach(function(el){ io.observe(el); });
+
+  // Etapas: progresso da barra acompanha a rolagem
+  (function(){
+    var etapas=[].slice.call(document.querySelectorAll('.como-grade .arco-etapa')); if(!etapas.length) return;
+    var pend=false;
+    function medir(){ pend=false; var vh=innerHeight, ini=vh*.85, fim=vh*.5;
+      etapas.forEach(function(el){ var r=el.getBoundingClientRect(), t=(ini-r.top)/((ini-fim)+r.height);
+        t=Math.max(0,Math.min(1,t)); el.style.setProperty('--p',t.toFixed(3)); el.classList.toggle('is-cheia',t>.98); }); }
+    function pedir(){ if(!pend){ pend=true; requestAnimationFrame(medir); } }
+    addEventListener('scroll',pedir,{passive:true}); addEventListener('resize',pedir); medir();
+  })();
+
+  // Palavras empilhadas: acendem uma a uma com a rolagem
+  (function(){
+    var ws=[].slice.call(document.querySelectorAll('.palavras-lista li')); if(!ws.length) return;
+    var box=document.querySelector('.palavras'), pend=false;
+    function medir(){ pend=false; var r=box.getBoundingClientRect(), vh=innerHeight;
+      var t=Math.max(0,Math.min(1,(vh*.9-r.top)/(vh*.55)));
+      ws.forEach(function(w){ var q=w.getBoundingClientRect(); w.classList.toggle('on', q.top < vh*.72); }); }
+    function pedir(){ if(!pend){ pend=true; requestAnimationFrame(medir); } }
+    addEventListener('scroll',pedir,{passive:true}); addEventListener('resize',pedir); medir();
+  })();
+  // Símbolo grande do rodapé se desenha quando o rodapé aparece
+  (function(){ var r=document.querySelector('.rodape'); if(!r) return;
+    var io=new IntersectionObserver(function(es){ if(es[0].isIntersecting){ r.classList.add('is-vista'); io.disconnect(); } },{threshold:.25}); io.observe(r); })();
+
+  // 5. perguntas: abrir e fechar deslizando
+  document.querySelectorAll('.arco-pergunta').forEach(function(d){
+    var s = d.querySelector('summary'), p = d.querySelector('p'), anim = null;
+    if (!s || !p || !p.animate) return;
+    s.addEventListener('click', function(e){
+      e.preventDefault();
+      if (anim) anim.cancel();
+      if (!d.open){
+        d.open = true;
+        var h = p.offsetHeight;
+        anim = p.animate([{ height: '0px', opacity: 0, paddingBottom: '0px' }, { height: h + 'px', opacity: 1, paddingBottom: getComputedStyle(p).paddingBottom }], { duration: 560, easing: 'cubic-bezier(.22,1,.36,1)' });
+        anim.onfinish = function(){ anim = null; };
+      } else {
+        var h2 = p.offsetHeight;
+        anim = p.animate([{ height: h2 + 'px', opacity: 1, paddingBottom: getComputedStyle(p).paddingBottom }, { height: '0px', opacity: 0, paddingBottom: '0px' }], { duration: 420, easing: 'cubic-bezier(.4,0,.2,1)' });
+        anim.onfinish = function(){ d.open = false; anim = null; };
+      }
+    });
+  });
+})();
+</script>
+<script>
+/* No fim, o espelho: a foto cresce conforme a rolagem (sem travar a página).
+   p = 0 quando o topo da foto entra na tela; p = 1 quando o fim da seção chega ao pé da tela. */
+(function(){
+  var f = document.querySelector('.confianca-foto');
+  if (!f || !document.documentElement.classList.contains('anim')) return;
+  var pendente = false;
+  function medir(){
+    pendente = false;
+    var r = f.getBoundingClientRect(), vh = innerHeight, sec = (f.closest('section') || f).getBoundingClientRect();
+    // mesma curva suave de antes; termina quando o fim da seção chega ao pé da tela (a próxima começa a entrar)
+    var t = Math.max(0, Math.min(1, (vh - r.top) / Math.max(1, sec.bottom - r.top)));
+    f.style.setProperty('--p', (t * t * (3 - 2 * t)).toFixed(4));
+  }
+  function pedir(){ if (!pendente){ pendente = true; requestAnimationFrame(medir); } }
+  addEventListener('scroll', pedir, { passive: true });
+  addEventListener('resize', pedir);
+  medir();
+})();
+</script>
+<script>
+/* Tratamentos: mede a maior altura do texto (com cada card aberto) para a seção não pular no hover */
+(function(){
+  var g = document.querySelector('.trat-galeria'); if (!g) return;
+  var mq = matchMedia('(min-width: 1001px) and (hover: hover)');
+  function medir(){
+    g.style.removeProperty('--trat-corpo');
+    if (!mq.matches) return;
+    var cards = [].slice.call(g.children), max = 0;
+    g.classList.add('sem-transicao');
+    cards.concat([null]).forEach(function(aberto){
+      cards.forEach(function(c){ c.classList.toggle('is-medindo', c === aberto); });
+      cards.forEach(function(c){ var b = c.querySelector('.arco-trat-corpo'); if (b) max = Math.max(max, b.scrollHeight); });
+    });
+    cards.forEach(function(c){ c.classList.remove('is-medindo'); });
+    g.style.setProperty('--trat-corpo', Math.ceil(max) + 'px');
+    requestAnimationFrame(function(){ g.classList.remove('sem-transicao'); });
+  }
+  var t; window.addEventListener('resize', function(){ clearTimeout(t); t = setTimeout(medir, 150); });
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(medir); else window.addEventListener('load', medir);
+})();
+</script>
+<script>
+/* Celular/toque: marca com .is-foco o card que está no meio da tela (substitui o hover) */
+(function(){
+  if (!('IntersectionObserver' in window) || !matchMedia('(hover: none)').matches) return;
+  var io = new IntersectionObserver(function(es){ es.forEach(function(e){ e.target.classList.toggle('is-foco', e.isIntersecting); }); }, { rootMargin: '-35% 0px -35% 0px' });
+  document.querySelectorAll('.dor, .arco-trat, .quem-fotos .arco-cartao-foto').forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>

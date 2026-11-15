@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,800&family=Figtree:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap");
+
+/* Arco Odontologia: componentes da landing page.
+   Linha: placas arredondadas sobre fundo-pagina, títulos grandes e leves, foto em tela cheia, botão-pílula com seta em círculo.
+   Prefixo arco-, valores só por token. */
+body { margin: 0; font-family: var(--font-texto); font-size: 16px; line-height: 1.6; background: var(--fundo-pagina); color: var(--texto); -webkit-font-smoothing: antialiased; }
+.arco-demo { padding: var(--espaco-5); display: flex; flex-wrap: wrap; gap: var(--espaco-4); align-items: flex-start; }
+.arco-demo-col { padding: var(--margem-placa); display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--margem-placa); }
+
+:where(.arco-btn, .arco-link, .arco-menu a, .arco-pergunta summary, .arco-zap):focus-visible { outline: 2px solid var(--foco); outline-offset: 3px; }
+
+/* Placa: toda seção é uma placa arredondada com 12px de mesa em volta */
+.arco-placa { background: var(--fundo); border-radius: var(--raio-lg); padding: var(--espaco-9) var(--espaco-8); }
+.arco-placa-branca { background: var(--fundo-elevado); }
+.arco-placa-escura { background: var(--grafite); color: var(--sobre-grafite); }
+
+/* Cabeçalho de seção: rótulo com ponto + título em dois tons + apoio */
+.arco-rotulo { display: inline-flex; align-items: center; gap: 10px; margin: 0; font-size: 14px; line-height: 1.4; font-weight: 500; color: var(--texto); }
+.arco-rotulo::before { content: ""; width: 7px; height: 7px; border-radius: 2px; background: var(--marca); }
+.arco-placa-escura .arco-rotulo { color: var(--sobre-grafite); }
+.arco-placa-escura .arco-rotulo::before { background: var(--destaque); }
+.arco-titulo { margin: 0; font-family: var(--font-display); font-size: 48px; line-height: 1.04; font-weight: 400; letter-spacing: -.03em; text-wrap: balance; max-width: 18ch; }
+.arco-titulo span { color: var(--texto-suave); }
+.arco-placa-escura .arco-titulo span { color: var(--sobre-grafite); opacity: .62; }
+.arco-apoio { margin: 0; font-size: 19px; line-height: 1.55; color: var(--texto-suave); max-width: 46ch; }
+.arco-secao-topo { display: grid; gap: var(--espaco-4); margin-bottom: var(--espaco-8); }
+.arco-secao-topo.is-lado { grid-template-columns: 1.2fr 1fr; align-items: end; gap: var(--espaco-6); }
+
+/* Botão: pílula com ícone num círculo à direita. Rótulo firme (600), estados visíveis */
+.arco-btn { display: inline-flex; align-items: center; gap: var(--espaco-3); min-height: 52px; padding: 6px 6px 6px var(--espaco-5); border-radius: var(--raio-pilula);
+  border: 1px solid transparent; font: 600 15px/1.2 var(--font-texto); letter-spacing: -.005em; text-decoration: none; cursor: pointer; white-space: nowrap;
+  transition: background-color .2s, color .2s, border-color .2s, transform .15s, box-shadow .2s; }
+.arco-btn:hover { transform: translateY(-1px); }
+.arco-btn:active { transform: translateY(0) scale(.98); }
+.arco-btn-icone { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; flex: none; transition: transform .25s; }
+.arco-btn-icone svg { width: 18px; height: 18px; }
+.arco-btn:hover .arco-btn-icone { transform: translateX(2px); }
+.arco-btn-zap { background: var(--marca); color: var(--sobre-marca); box-shadow: 0 10px 24px -14px var(--marca); }
+.arco-btn-zap .arco-btn-icone { background: var(--sobre-marca); color: var(--marca); }
+.arco-btn-zap:hover { background: var(--texto); color: var(--fundo); }
+.arco-btn-primario { background: var(--texto); color: var(--fundo); }
+.arco-btn-primario .arco-btn-icone { background: var(--fundo); color: var(--texto); }
+.arco-btn-primario:hover { background: var(--marca); color: var(--sobre-marca); }
+.arco-btn-claro { background: var(--fundo-elevado); color: var(--texto); }
+.arco-btn-claro .arco-btn-icone { background: var(--texto); color: var(--fundo-elevado); }
+.arco-btn-claro:hover { background: var(--marca-suave); }
+.arco-btn-contorno { background: transparent; color: var(--texto); border-color: var(--linha-forte); padding-right: var(--espaco-5); }
+.arco-btn-contorno:hover { background: var(--fundo-elevado); border-color: var(--texto); }
+.arco-btn-vidro { background: var(--vidro); color: var(--sobre-grafite); border-color: var(--vidro-borda); padding-right: var(--espaco-5); backdrop-filter: blur(10px); }
+.arco-btn-vidro:hover { background: var(--vidro-borda); }
+
+/* Selos de confiança sob o botão */
+.arco-selos { display: flex; flex-wrap: wrap; gap: var(--espaco-2) var(--espaco-5); margin: var(--espaco-4) 0 0; padding: 0; list-style: none; font-size: 13px; line-height: 1.5; color: var(--texto-suave); }
+.arco-selos li { display: inline-flex; align-items: center; gap: 8px; }
+.arco-selos li::before { content: ""; width: 14px; height: 14px; flex: none; border-radius: 50%; background: var(--marca-suave)
+  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath d='M4 7.2l2 2 4-4.4' fill='none' stroke='%232F5D57' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/14px no-repeat; }
+
+/* Menu: barra reta com fio de 1px, logo à esquerda, links no centro, botão à direita */
+.arco-menu { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: var(--espaco-4); padding: var(--espaco-2) var(--espaco-2) var(--espaco-2) var(--espaco-5);
+  border-radius: var(--raio-md); background: var(--fundo-elevado); border: 1px solid var(--linha); }
+.arco-menu > :last-child { justify-self: end; }
+.arco-menu.is-fixo { box-shadow: var(--sombra-flutuante); border-color: transparent; }
+.arco-menu-logo { display: flex; color: var(--texto); }
+.arco-menu-links { display: flex; gap: var(--espaco-5); }
+.arco-menu-links a { color: var(--texto); text-decoration: none; font-size: 15px; font-weight: 500; padding: 6px 0; border-bottom: 1.5px solid transparent; }
+.arco-menu-links a:hover, .arco-menu-links a[aria-current] { border-bottom-color: var(--marca); }
+.arco-menu .arco-btn { min-height: 44px; padding: 4px 4px 4px var(--espaco-4); }
+.arco-menu .arco-btn-icone { width: 36px; height: 36px; }
+.arco-menu.is-sobre-grafite { background: transparent; border-color: var(--vidro-borda); }
+.arco-menu.is-sobre-grafite .arco-menu-logo, .arco-menu.is-sobre-grafite .arco-menu-links a { color: var(--sobre-grafite); }
+.arco-menu.is-sobre-grafite .arco-menu-links a:hover { border-bottom-color: var(--destaque); }
+
+/* Hero: placa clara, texto à esquerda, pessoas grandes à direita até a base, dissolvidas no fundo; faixa grafite de garantias embaixo */
+.arco-hero { position: relative; isolation: isolate; overflow: hidden; border-radius: var(--raio-lg); background: var(--fundo); color: var(--texto);
+  display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: auto 1fr auto; min-height: 820px; }
+.arco-hero > nav { position: relative; z-index: 3; margin: var(--espaco-4) var(--espaco-4) 0; }
+.arco-hero-foto { position: absolute; z-index: -2; top: 0; right: 0; bottom: 56px; width: 60%; margin: 0; }
+.arco-hero-foto img { width: 100%; height: 100%; object-fit: cover; object-position: 42% 18%; display: block; }
+.arco-hero::before { content: ""; position: absolute; z-index: -1; inset: 0;
+  background: linear-gradient(to right, var(--fundo) 41%, color-mix(in srgb, var(--fundo) 55%, transparent) 47%, transparent 56%); }
+.arco-hero-texto { position: relative; align-self: center; display: grid; gap: var(--espaco-5); max-width: 600px; padding: var(--espaco-8) var(--espaco-8) var(--espaco-7); min-width: 0; }
+.arco-hero .arco-titulo { font-size: 72px; line-height: 1; letter-spacing: -.035em; max-width: 12ch; }
+.arco-hero-acoes { display: flex; flex-wrap: wrap; gap: var(--espaco-3); align-items: center; }
+.arco-hero-numeros { display: flex; gap: var(--espaco-8); margin-top: var(--espaco-5); padding-top: var(--espaco-5); border-top: 1px solid var(--linha); }
+.arco-hero-numeros div { display: grid; gap: 4px; font-size: 13px; color: var(--texto-suave); }
+.arco-hero-numeros b { font-family: var(--font-display); font-size: 36px; line-height: 1; font-weight: 400; letter-spacing: -.03em; color: var(--texto); }
+.arco-hero-faixa { position: relative; z-index: 2; background: var(--grafite); color: var(--sobre-grafite); overflow: hidden; }
+.arco-hero-faixa ul { list-style: none; margin: 0; padding: 18px 0; display: flex; width: max-content; animation: arco-correr 40s linear infinite; }
+.arco-hero-faixa li { display: inline-flex; align-items: center; gap: 10px; padding: 0 var(--espaco-6); font-size: 14px; font-weight: 500; border-right: 1px solid var(--vidro-borda); }
+.arco-hero-faixa li::before { content: ""; width: 7px; height: 7px; border-radius: 2px; background: var(--marca-suave); }@media (prefers-reduced-motion: reduce) { .arco-hero-faixa ul { animation: none; } }
+
+/* Foto em arco */
+.arco-foto { margin: 0; aspect-ratio: 4 / 5; max-width: 100%; border-radius: var(--raio-arco) var(--raio-arco) var(--raio-lg) var(--raio-lg); overflow: hidden; background: var(--fundo-suave); position: relative; }
+.arco-foto img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* Cartão de foto com legenda sobre véu */
+.arco-cartao-foto { position: relative; margin: 0; border-radius: var(--raio-lg); overflow: hidden; aspect-ratio: 16 / 10; max-width: 100%; color: var(--sobre-grafite); }
+.arco-cartao-foto img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.arco-cartao-foto figcaption { position: absolute; inset: auto 0 0 0; padding: var(--espaco-8) var(--espaco-6) var(--espaco-5); background: linear-gradient(to top, var(--veu), transparent); display: grid; gap: 2px; }
+.arco-cartao-foto b { font-weight: 500; font-size: 17px; }
+.arco-cartao-foto span { font-size: 14px; opacity: .85; max-width: 44ch; }
+.arco-legenda-ilustrativa { position: absolute; top: var(--espaco-4); right: var(--espaco-4); font-family: var(--font-mono); font-size: 11px; letter-spacing: .06em; padding: 4px 10px; border-radius: var(--raio-pilula); background: var(--vidro); border: 1px solid var(--vidro-borda); color: var(--sobre-grafite); }
+
+/* Faixa de prova: números grandes e leves separados por fio */
+.arco-prova { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.arco-prova div { display: grid; gap: var(--espaco-2); padding: var(--espaco-2) var(--espaco-5); border-left: 1px solid var(--linha); font-size: 14px; color: var(--texto-suave); }
+.arco-prova div:first-child { border-left: 0; padding-left: 0; }
+.arco-prova b { font-family: var(--font-display); font-size: 56px; line-height: 1; font-weight: 400; letter-spacing: -.035em; color: var(--texto); }
+.arco-prova-nota { grid-column: 1 / -1; margin: var(--espaco-5) 0 0; font-family: var(--font-mono); font-size: 11px; letter-spacing: .06em; color: var(--texto-suave); }
+
+/* Cartões */
+.arco-cartao { display: grid; gap: var(--espaco-3); align-content: start; padding: var(--espaco-6); background: var(--fundo-elevado); border-radius: var(--raio-md); }
+.arco-placa-branca .arco-cartao { background: var(--fundo); }
+.arco-cartao h3 { margin: 0; font-family: var(--font-display); font-size: 24px; line-height: 1.2; font-weight: 500; letter-spacing: -.015em; }
+.arco-cartao p { margin: 0; color: var(--texto-suave); }
+.arco-icone { width: 52px; height: 52px; border-radius: 50%; border: 1px solid var(--linha); background: var(--fundo-elevado); display: grid; place-items: center; margin-bottom: var(--espaco-5); }
+.arco-icone img { width: 24px; height: 24px; }
+.arco-trat { padding: var(--espaco-2); gap: 0; }
+.arco-trat-foto { aspect-ratio: 4 / 3; border-radius: calc(var(--raio-md) - 6px); overflow: hidden; background: var(--fundo-suave); }
+.arco-trat-foto img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s; }
+.arco-trat:hover .arco-trat-foto img { transform: scale(1.03); }
+.arco-trat-corpo { display: grid; gap: var(--espaco-2); padding: var(--espaco-5) var(--espaco-4) var(--espaco-4); }
+.arco-link { display: inline-flex; align-items: center; gap: 8px; margin-top: var(--espaco-3); color: var(--texto); font-weight: 500; font-size: 15px; text-decoration: none; }
+.arco-link::after { content: "→"; color: var(--marca); transition: transform .2s; }
+.arco-link:hover::after { transform: translateX(3px); }
+
+/* Etapas: barra segmentada de progresso, sem numerais grandes */
+.arco-etapas { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--espaco-5); counter-reset: etapa; }
+.arco-etapa { display: grid; gap: var(--espaco-2); align-content: start; counter-increment: etapa; }
+.arco-etapa::before { content: ""; height: 4px; border-radius: 2px; background: var(--linha); margin-bottom: var(--espaco-4); }
+.arco-etapa.is-feita::before, .arco-etapa.is-atual::before { background: var(--marca); }
+.arco-etapa small { font-size: 13px; color: var(--texto-suave); }
+.arco-etapa small::before { content: "Etapa " counter(etapa); }
+.arco-etapa h3 { margin: 0; font-family: var(--font-display); font-size: 22px; line-height: 1.2; font-weight: 500; letter-spacing: -.015em; }
+.arco-etapa p { margin: 0; color: var(--texto-suave); font-size: 15px; }
+
+/* Depoimento */
+.arco-depo { display: grid; gap: var(--espaco-6); align-content: space-between; padding: var(--espaco-6); background: var(--fundo-elevado); border-radius: var(--raio-md); }
+.arco-depo blockquote { margin: 0; font-family: var(--font-display); font-size: 22px; line-height: 1.4; font-weight: 400; letter-spacing: -.01em; }
+.arco-depo-autor { display: flex; gap: var(--espaco-3); align-items: center; font-size: 14px; }
+.arco-depo-autor img { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; }
+.arco-depo-autor b { display: block; font-weight: 500; font-size: 15px; }
+.arco-depo-autor span { color: var(--texto-suave); }
+.arco-iniciais { width: 44px; height: 44px; flex: none; border-radius: 50%; display: grid; place-items: center; background: var(--marca-suave); color: var(--marca); font-weight: 600; font-size: 14px; }
+.arco-estrelas { margin-left: auto; color: var(--destaque); letter-spacing: 1px; font-size: 14px; }
+
+/* Depoimentos em faixa: duas fileiras que correm em sentidos opostos, bordas dissolvidas */
+.arco-faixa-depos { display: grid; gap: var(--espaco-3); overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent); mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent); }
+.arco-faixa-trilho { display: flex; gap: var(--espaco-3); width: max-content; animation: arco-correr 60s linear infinite; }
+.arco-faixa-trilho.is-volta { animation-direction: reverse; animation-duration: 70s; }
+.arco-faixa-depos:hover .arco-faixa-trilho, .arco-faixa-depos:focus-within .arco-faixa-trilho { animation-play-state: paused; }
+.arco-faixa-trilho .arco-depo { width: 380px; flex: none; }
+.arco-faixa-trilho .arco-depo blockquote { font-size: 19px; }
+@keyframes arco-correr { to { transform: translateX(calc(-50% - var(--espaco-3) / 2)); } }
+@media (prefers-reduced-motion: reduce) { .arco-faixa-trilho { animation: none; } .arco-faixa-depos { overflow-x: auto; } }
+
+/* Pergunta */
+.arco-perguntas { display: grid; border-top: 1px solid var(--linha); max-width: 760px; }
+.arco-pergunta { border-bottom: 1px solid var(--linha); }
+.arco-pergunta summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: var(--espaco-4); padding: var(--espaco-5) 0;
+  font-family: var(--font-display); font-size: 22px; line-height: 1.25; font-weight: 400; letter-spacing: -.015em; min-height: 48px; }
+.arco-pergunta summary::-webkit-details-marker { display: none; }
+.arco-pergunta summary::after { content: "+"; flex: none; width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--linha-forte); display: grid; place-items: center;
+  font: 400 20px/1 var(--font-texto); color: var(--texto); transition: transform .25s; }
+.arco-pergunta[open] summary::after { transform: rotate(45deg); }
+.arco-pergunta p { margin: 0; padding: 0 56px var(--espaco-5) 0; color: var(--texto-suave); max-width: var(--largura-texto); }
+
+/* WhatsApp fixo */
+.arco-zap { position: fixed; right: max(var(--espaco-4), env(safe-area-inset-right, 0px)); bottom: calc(var(--espaco-4) + env(safe-area-inset-bottom, 0px)); z-index: 20; box-shadow: var(--sombra-flutuante); }
+
+/* CTA final + rodapé */
+.arco-final { display: grid; gap: var(--espaco-8); }
+.arco-final-topo { display: grid; grid-template-columns: 1.3fr 1fr; gap: var(--espaco-6); align-items: end; }
+.arco-final .arco-titulo { font-size: 64px; line-height: 1; letter-spacing: -.035em; max-width: 13ch; }
+.arco-final-info { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--espaco-5); padding-top: var(--espaco-6); border-top: 1px solid var(--vidro-borda); font-size: 15px; }
+.arco-final-info b { display: block; font-weight: 500; font-size: 13px; opacity: .6; margin-bottom: 4px; }
+.arco-final-info a { color: inherit; }
+.arco-legal { margin: 0; font-family: var(--font-mono); font-size: 11px; letter-spacing: .06em; opacity: .75; display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--espaco-3); }
+.arco-legal a { color: inherit; }
+
+@media (max-width: 760px) {
+  .arco-placa { padding: var(--espaco-8) var(--espaco-5); }
+  .arco-titulo { font-size: 34px; }
+  .arco-hero { min-height: 0; grid-template-rows: auto 340px auto auto; }
+  .arco-hero > nav { margin: var(--espaco-3) var(--espaco-3) 0; }
+  .arco-hero-foto { width: 100%; bottom: auto; height: 460px; }
+  .arco-hero-foto img { object-position: 62% 25%; }
+  .arco-hero::before { background: linear-gradient(to bottom, transparent 260px, var(--fundo) 460px); }
+  .arco-hero-texto { grid-row: 3; padding: 0 var(--espaco-5) var(--espaco-7); }
+  .arco-hero-faixa { grid-row: 4; }
+  .arco-hero .arco-titulo { font-size: 44px; }
+  .arco-hero-numeros { gap: var(--espaco-6); }
+  .arco-hero-numeros b { font-size: 28px; }
+  .arco-hero .arco-titulo { font-size: 44px; }
+  .arco-final .arco-titulo { font-size: 40px; }
+  .arco-secao-topo.is-lado, .arco-final-topo { grid-template-columns: 1fr; }
+  .arco-prova { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: var(--espaco-6); }
+  .arco-prova div:nth-child(3) { border-left: 0; padding-left: 0; }
+  .arco-prova b { font-size: 44px; }
+  .arco-etapas, .arco-final-info { grid-template-columns: 1fr; }
+  .arco-menu { grid-template-columns: 1fr auto; padding-left: var(--espaco-4); }
+  .arco-menu-logo svg { width: 100px; height: auto; }
+  .arco-menu .arco-btn { font-size: 14px; padding-left: 14px; gap: var(--espaco-2); }
+  .arco-menu-links { display: none; }
+  .arco-faixa-trilho .arco-depo { width: 300px; }
+}
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; } }

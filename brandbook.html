@@ -1,0 +1,709 @@
+<title>Arco Odontologia Brandbook</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Figtree:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: manual em capítulos empilhados, coluna de texto estreita + área larga para peças; marca aparece "em uso" o tempo todo */
+:root{
+  /* cores da marca (fixas, iguais nos dois temas) */
+  --b-porcelana:#F5F8F7;
+  --b-grafite:#16242A;
+  --b-salvia:#2F5D57;
+  --b-menta:#CFE8DF;
+  --b-ambar:#E3A03A;
+  --b-nevoa:#E6EEEC;
+  /* tokens da página */
+  --bg:#F3F6F5;
+  --surface:#FFFFFF;
+  --fg:#16242A;
+  --muted:#55666B;
+  --line:#D5E0DD;
+  --accent:#2F5D57;
+  --accent-soft:#DCEDE7;
+  --font-display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --font-body:"Figtree", "Segoe UI", system-ui, sans-serif;
+  --font-mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+  --radius:14px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F181B; --surface:#16232780; --fg:#E8F0EE; --muted:#9DB0B0; --line:#26383C;
+    --accent:#8CC9B7; --accent-soft:#1D3533; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F181B; --surface:#16232780; --fg:#E8F0EE; --muted:#9DB0B0; --line:#26383C;
+  --accent:#8CC9B7; --accent-soft:#1D3533; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--font-body);font-size:16px;line-height:1.6;
+  padding-left:max(16px, env(safe-area-inset-left,0px));padding-right:max(16px, env(safe-area-inset-right,0px));}
+.wrap{max-width:1120px;margin:0 auto}
+h1,h2,h3,h4{font-family:var(--font-display);line-height:1.1;text-wrap:balance;margin:0}
+h2{font-size:clamp(28px,4vw,42px);font-weight:800;letter-spacing:-.02em}
+h3{font-size:20px;font-weight:600}
+p{margin:0}
+.lead{font-size:18px;color:var(--muted);max-width:62ch}
+.eyebrow{font-family:var(--font-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.mono{font-family:var(--font-mono);font-size:13px}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+
+/* capa */
+.cover{padding-block:56px 40px;display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center}
+.cover h1{font-size:clamp(48px,9vw,104px);font-weight:800;letter-spacing:-.045em}
+.cover h1 span{color:var(--accent)}
+.cover .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.tag{font-family:var(--font-mono);font-size:12px;padding:5px 10px;border:1px solid var(--line);border-radius:99px;color:var(--muted)}
+.cover-art{aspect-ratio:1/1;max-width:100%;border-radius:28px;background:var(--b-grafite);display:grid;place-items:center;position:relative;overflow:hidden}
+.cover-art svg{width:62%}
+
+nav.toc{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-block:1px solid var(--line);margin-bottom:8px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+nav.toc ul{list-style:none;margin:0 auto;padding:10px 0;display:flex;gap:4px 18px;overflow-x:auto;max-width:1120px;white-space:nowrap}
+nav.toc a{font-size:14px;text-decoration:none;color:var(--muted)}
+nav.toc a:hover{color:var(--fg)}
+
+section.ch{padding-block:64px;border-bottom:1px solid var(--line);display:grid;gap:28px}
+.head{display:grid;gap:10px}
+
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;display:grid;gap:10px;align-content:start;min-width:0}
+.box h3{font-size:17px}
+.box ul{margin:0;padding-left:18px;color:var(--muted)}
+.box li+li{margin-top:4px}
+.kv{display:grid;grid-template-columns:150px 1fr;gap:10px 18px;font-size:15px}
+.kv dt{font-family:var(--font-mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:3px}
+.kv dd{margin:0}
+
+/* persona */
+.persona{display:grid;grid-template-columns:64px 1fr;gap:16px}
+.avatar{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;font-family:var(--font-display);font-weight:800;font-size:22px}
+
+/* logo */
+.logo-stage{display:grid;grid-template-columns:2fr 1fr 1fr;gap:16px}
+.stage{border-radius:var(--radius);display:grid;place-items:center;padding:36px 20px;min-height:200px;position:relative;min-width:0}
+.stage .lbl{position:absolute;left:14px;bottom:10px;font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;opacity:.7}
+.s-light{background:var(--b-porcelana);color:var(--b-grafite);border:1px solid var(--line)}
+.s-dark{background:var(--b-grafite);color:var(--b-porcelana)}
+.s-salvia{background:var(--b-salvia);color:var(--b-porcelana)}
+.s-menta{background:var(--b-menta);color:var(--b-grafite)}
+.rules{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.dont{position:relative}
+.dont::after{content:"";position:absolute;inset:auto 12px 12px auto;width:22px;height:22px;border-radius:50%;background:#C2463B;
+  -webkit-mask:linear-gradient(#000 0 0);}
+.x{position:absolute;right:12px;top:10px;font-family:var(--font-mono);font-size:11px;color:#B23A30;background:#FBE9E7;padding:2px 7px;border-radius:99px}
+
+/* paleta */
+.palette{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px}
+.sw{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);background:var(--surface);display:grid;min-width:0}
+.sw .chip{height:120px}
+.sw .info{padding:12px;display:grid;gap:2px}
+.sw .info strong{font-family:var(--font-display);font-size:16px}
+.sw button{all:unset;cursor:pointer;font-family:var(--font-mono);font-size:12px;color:var(--muted)}
+.sw button:hover{color:var(--fg)}
+.ratio{display:flex;height:44px;border-radius:10px;overflow:hidden;border:1px solid var(--line)}
+.ratio div{display:grid;place-items:center;font-family:var(--font-mono);font-size:11px}
+
+/* tipografia */
+.type-row{display:grid;grid-template-columns:180px 1fr;gap:20px;padding-block:18px;border-top:1px solid var(--line);align-items:baseline}
+.type-row .spec{font-family:var(--font-mono);font-size:12px;color:var(--muted)}
+
+/* ícones */
+.icons{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px}
+.icon{border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);padding:18px 10px;display:grid;justify-items:center;gap:10px;font-size:13px;color:var(--muted);text-align:center}
+.icon svg{width:36px;height:36px;color:var(--accent)}
+
+/* moodboard */
+.mood{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:150px;gap:12px}
+.m{border-radius:var(--radius);padding:14px;display:flex;align-items:flex-end;font-size:13px;line-height:1.35;min-width:0}
+.m.big{grid-row:span 2;grid-column:span 2}
+.m.tall{grid-row:span 2}
+
+/* voz */
+.voice{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.say{border-left:3px solid var(--accent);padding:6px 0 6px 14px;font-size:15px}
+.say.no{border-color:#C2463B;color:var(--muted);text-decoration:line-through;text-decoration-color:#C2463B88}
+
+/* wireframe LP */
+.lp{display:grid;gap:10px}
+.lp-sec{display:grid;grid-template-columns:44px 1fr;gap:16px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.lp-sec .n{font-family:var(--font-mono);font-size:12px;color:var(--accent);padding-top:3px}
+.lp-sec h4{font-size:17px;font-weight:600;margin-bottom:4px}
+.lp-sec .copy{color:var(--muted);font-size:15px}
+.lp-sec .copy b{color:var(--fg);font-weight:600}
+
+/* aplicações */
+.apps{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px}
+.card-front,.card-back{aspect-ratio:85/55;border-radius:10px;max-width:100%;box-shadow:0 18px 40px -22px #16242A99}
+.card-front{background:var(--b-grafite);color:var(--b-porcelana);display:grid;place-items:center}
+.card-back{background:var(--b-porcelana);color:var(--b-grafite);padding:7% 8%;display:grid;align-content:space-between;border:1px solid var(--line)}
+.card-back .nm{font-family:var(--font-display);font-weight:800;font-size:clamp(15px,2vw,20px)}
+.card-back .rl{font-size:12px;color:var(--b-salvia)}
+.card-back .ct{font-family:var(--font-mono);font-size:10.5px;line-height:1.5}
+.post{aspect-ratio:1/1;max-width:100%;border-radius:12px;background:var(--b-menta);color:var(--b-grafite);padding:9%;display:grid;align-content:space-between;position:relative;overflow:hidden}
+.post h4{font-size:clamp(20px,2.6vw,30px);font-weight:800;letter-spacing:-.02em;position:relative}
+.post .arcbg{position:absolute;right:-18%;bottom:-24%;width:85%;color:var(--b-salvia);opacity:.22}
+.post .foot{display:flex;justify-content:space-between;align-items:center;font-size:12px;position:relative}
+.story{aspect-ratio:9/16;max-width:100%;border-radius:16px;background:var(--b-salvia);color:var(--b-porcelana);padding:12% 10%;display:grid;align-content:space-between;overflow:hidden;position:relative}
+.story h4{font-size:clamp(20px,2.4vw,28px);font-weight:800;letter-spacing:-.02em}
+.story .btn{background:var(--b-ambar);color:var(--b-grafite);border-radius:99px;padding:10px 14px;font-weight:600;font-size:14px;text-align:center}
+.browser{border-radius:14px;overflow:hidden;border:1px solid var(--line);background:var(--b-porcelana);color:var(--b-grafite)}
+.browser .bar{display:flex;gap:6px;align-items:center;padding:10px 14px;background:var(--b-nevoa)}
+.browser .bar i{width:10px;height:10px;border-radius:50%;background:#C5D3D0;display:block}
+.browser .bar span{margin-left:10px;font-family:var(--font-mono);font-size:11px;color:#55666B}
+.hero{display:grid;grid-template-columns:1.1fr 1fr;gap:24px;padding:28px;align-items:center}
+.hero nav{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;font-size:13px}
+.hero nav .links{display:flex;gap:16px;color:#55666B}
+.hero h4{font-size:clamp(24px,3.4vw,40px);font-weight:800;letter-spacing:-.03em;line-height:1.05}
+.hero p{color:#4A5B60;font-size:15px;margin-top:12px}
+.hero .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.b1{background:var(--b-salvia);color:var(--b-porcelana);padding:11px 16px;border-radius:99px;font-weight:600;font-size:14px}
+.b2{border:1px solid var(--b-salvia);color:var(--b-salvia);padding:10px 16px;border-radius:99px;font-weight:600;font-size:14px}
+.hero .photo{aspect-ratio:4/5;max-width:100%;border-radius:200px 200px 18px 18px;background:
+  radial-gradient(120% 80% at 30% 20%, #FFFFFF 0%, #CFE8DF 45%, #2F5D57 120%);position:relative;display:grid;place-items:end center;padding:16px}
+.hero .photo small{font-family:var(--font-mono);font-size:11px;color:#16242A;background:#F5F8F7cc;padding:4px 8px;border-radius:6px}
+.hero .proof{grid-column:1/-1;display:flex;gap:28px;flex-wrap:wrap;border-top:1px solid #D5E0DD;padding-top:16px;font-size:13px;color:#4A5B60}
+.hero .proof b{font-family:var(--font-display);font-size:22px;color:#16242A;display:block}
+.cap{font-size:13px;color:var(--muted);margin-top:8px}
+
+.refs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.ref{display:grid;gap:4px;padding:16px 18px;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);text-decoration:none;color:var(--fg);min-width:0}
+.ref:hover{border-color:var(--accent)}
+.ref span{font-size:14px;color:var(--muted)}
+.ref strong{font-weight:600}
+
+.note{background:var(--accent-soft);border-radius:var(--radius);padding:18px 20px;font-size:15px}
+footer{padding-block:40px 64px;color:var(--muted);font-size:14px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+
+@media (max-width:900px){
+  .cover,.grid3,.logo-stage,.rules{grid-template-columns:1fr}
+  .palette{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .icons{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .mood{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .hero{grid-template-columns:1fr}
+  .apps > *{grid-column:1/-1 !important}
+}
+@media (max-width:640px){
+  .grid2,.voice,.refs{grid-template-columns:1fr}
+  .kv,.type-row{grid-template-columns:1fr;gap:4px}
+  .palette{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .mood .m.big{grid-column:span 2}
+  .hero nav .links{display:none}
+}
+@media (prefers-reduced-motion:no-preference){
+  .cover-art .ring{animation:draw 1.6s ease-out both}
+  @keyframes draw{from{stroke-dashoffset:220}to{stroke-dashoffset:0}}
+}
+</style>
+
+<!-- símbolo reutilizável -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="arco" viewBox="0 0 64 56">
+      <path d="M8 8 C8 40 20 50 32 50 C44 50 56 40 56 8" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
+      <path d="M21 8 C21 28 26 35 32 35 C38 35 43 28 43 8" fill="none" stroke="var(--b-ambar)" stroke-width="5" stroke-linecap="round"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="wrap">
+  <header class="cover">
+    <div>
+      <p class="eyebrow">Projeto fictício de portfólio · Brandbook v1 · nov/2026</p>
+      <h1>arco<span>.</span><br>odontologia</h1>
+      <p class="lead" style="margin-top:18px">Briefing, identidade visual, referências, tom de voz e roteiro da landing page de uma clínica de implantes e lentes de contato dental em Ribeirão Preto/SP.</p>
+      <div class="meta">
+        <span class="tag">Implantodontia</span><span class="tag">Lentes de contato dental</span><span class="tag">Público 35–60</span><span class="tag">Captação via WhatsApp</span>
+      </div>
+    </div>
+    <div class="cover-art" aria-label="Símbolo da Arco Odontologia sobre fundo grafite">
+      <svg viewBox="0 0 64 56" style="color:var(--b-menta)">
+        <path class="ring" d="M8 8 C8 40 20 50 32 50 C44 50 56 40 56 8" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-dasharray="220"/>
+        <path class="ring" d="M21 8 C21 28 26 35 32 35 C38 35 43 28 43 8" fill="none" stroke="var(--b-ambar)" stroke-width="5" stroke-linecap="round" stroke-dasharray="220"/>
+      </svg>
+    </div>
+  </header>
+</div>
+
+<nav class="toc" aria-label="Capítulos">
+  <ul>
+    <li><a href="#briefing">Briefing</a></li>
+    <li><a href="#publico">Público</a></li>
+    <li><a href="#conceito">Conceito</a></li>
+    <li><a href="#logo">Logo</a></li>
+    <li><a href="#cores">Cores</a></li>
+    <li><a href="#tipografia">Tipografia</a></li>
+    <li><a href="#grafismos">Grafismos e ícones</a></li>
+    <li><a href="#moodboard">Moodboard e foto</a></li>
+    <li><a href="#voz">Tom de voz</a></li>
+    <li><a href="#lp">Roteiro da LP</a></li>
+    <li><a href="#aplicacoes">Aplicações</a></li>
+    <li><a href="#refs">Referências</a></li>
+  </ul>
+</nav>
+
+<main class="wrap">
+
+  <!-- BRIEFING -->
+  <section class="ch" id="briefing">
+    <div class="head">
+      <p class="eyebrow">Briefing</p>
+      <h2>O que o cliente pediu</h2>
+      <p class="lead">Como se fosse uma reunião real de 40 minutos com a dona da clínica. Use esse formato de perguntas também com clientes de verdade.</p>
+    </div>
+    <div class="grid2">
+      <div class="box">
+        <h3>Ficha do cliente</h3>
+        <dl class="kv">
+          <dt>Nome</dt><dd>Arco Odontologia</dd>
+          <dt>Responsável</dt><dd>Dra. Lívia Andrade, implantodontista (CRO-SP 000000, fictício)</dd>
+          <dt>Local</dt><dd>Ribeirão Preto/SP, bairro Jardim Botânico</dd>
+          <dt>Tempo de casa</dt><dd>12 anos, 3 cadeiras, 6 pessoas na equipe</dd>
+          <dt>Carro-chefe</dt><dd>Implantes (protocolo e unitário) e lentes de contato dental</dd>
+          <dt>Ticket médio</dt><dd>R$ 9 mil a R$ 35 mil por tratamento</dd>
+        </dl>
+      </div>
+      <div class="box">
+        <h3>Problema</h3>
+        <ul>
+          <li>Hoje só tem Instagram e um site antigo que não aparece no Google.</li>
+          <li>Paga anúncio no Meta, mas o lead cai num link genérico e some.</li>
+          <li>A clínica parece "mais uma" — a marca atual é um dente azul de banco de imagens.</li>
+          <li>Paciente de implante pesquisa muito e tem medo de dor e de preço.</li>
+        </ul>
+      </div>
+      <div class="box">
+        <h3>Objetivo da landing page</h3>
+        <ul>
+          <li><b>Uma ação:</b> agendar a avaliação com escaneamento 3D pelo WhatsApp.</li>
+          <li>Meta: 40 avaliações/mês vindas da LP (hoje ~12).</li>
+          <li>Taxa de conversão alvo: 6% dos visitantes clicando no WhatsApp.</li>
+          <li>Carregar em menos de 2,5 s no celular (LCP), já que 85% vem do Instagram.</li>
+        </ul>
+      </div>
+      <div class="box">
+        <h3>Oferta e diferenciais</h3>
+        <ul>
+          <li>Avaliação + escaneamento intraoral 3D sem custo na primeira consulta.</li>
+          <li>Planejamento digital: o paciente vê a simulação do sorriso antes de começar.</li>
+          <li>Sedação consciente para quem tem medo.</li>
+          <li>Parcelamento em até 24x e atendimento sábado de manhã.</li>
+        </ul>
+        <p class="cap" style="margin:0">Gratuidade da avaliação e parcelamento são argumentos de venda <b>internos</b>: a recepção usa na conversa, mas não entram na LP nem nos anúncios (ver Restrições).</p>
+      </div>
+      <div class="box">
+        <h3>Concorrência (fictícia)</h3>
+        <ul>
+          <li><b>Rede de franquia popular:</b> preço baixo, comunicação de "promoção", pouca confiança.</li>
+          <li><b>Clínica de luxo do centro:</b> estética fria, preço escondido, intimida.</li>
+          <li><b>Espaço da Arco:</b> premium acessível — técnica de ponta com conversa de gente.</li>
+        </ul>
+      </div>
+      <div class="box">
+        <h3>Restrições (CFO)</h3>
+        <ul>
+          <li>Nome e CRO do responsável técnico visíveis em todas as peças.</li>
+          <li>Sem promessa de resultado e sem "o melhor da cidade".</li>
+          <li>Antes e depois só com autorização escrita do paciente e sem sensacionalismo.</li>
+          <li>Não anunciar preço como chamariz ("implante por R$ 99").</li>
+          <li>Não anunciar serviço gratuito nem forma de pagamento (Código de Ética Odontológica, art. 44). "Sem custo" e "24x" ficam para a conversa no WhatsApp, fora da página e dos anúncios.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="box">
+      <h3>Entregáveis e prazo</h3>
+      <dl class="kv">
+        <dt>Identidade</dt><dd>Logo (3 versões), paleta, tipografia, grafismos, 6 ícones, guia de foto</dd>
+        <dt>Landing page</dt><dd>1 página responsiva, 10 seções, botão fixo de WhatsApp, pixel do Meta e GA4, LGPD</dd>
+        <dt>Peças</dt><dd>Cartão de visita, 3 posts, 2 stories, foto de perfil</dd>
+        <dt>Prazo</dt><dd>15 dias úteis: 5 de identidade, 7 de LP, 3 de ajustes</dd>
+      </dl>
+    </div>
+  </section>
+
+  <!-- PÚBLICO -->
+  <section class="ch" id="publico">
+    <div class="head">
+      <p class="eyebrow">Público</p>
+      <h2>Duas pessoas que a página precisa convencer</h2>
+    </div>
+    <div class="grid2">
+      <div class="box persona">
+        <div class="avatar" style="background:var(--b-menta);color:var(--b-grafite)">RM</div>
+        <div style="display:grid;gap:8px">
+          <h3>Roberto, 54 · implante</h3>
+          <p class="cap" style="margin:0">Comerciante, usa prótese móvel há 6 anos.</p>
+          <ul style="margin:0;padding-left:18px;color:var(--muted)">
+            <li><b style="color:var(--fg)">Quer:</b> mastigar churrasco sem a prótese soltar.</li>
+            <li><b style="color:var(--fg)">Medo:</b> dor, cirurgia, ser enganado no preço.</li>
+            <li><b style="color:var(--fg)">Decide por:</b> indicação, avaliações no Google, conversar com a doutora.</li>
+            <li><b style="color:var(--fg)">Gatilho da LP:</b> "planejamento digital" + "sedação" + "valor por escrito antes de começar".</li>
+          </ul>
+        </div>
+      </div>
+      <div class="box persona">
+        <div class="avatar" style="background:var(--b-ambar);color:var(--b-grafite)">CS</div>
+        <div style="display:grid;gap:8px">
+          <h3>Carolina, 38 · lentes</h3>
+          <p class="cap" style="margin:0">Advogada, vê muito conteúdo de estética no Instagram.</p>
+          <ul style="margin:0;padding-left:18px;color:var(--muted)">
+            <li><b style="color:var(--fg)">Quer:</b> sorriso bonito mas natural, nada de "dente de porcelana branca".</li>
+            <li><b style="color:var(--fg)">Medo:</b> ficar artificial, desgastar o dente à toa.</li>
+            <li><b style="color:var(--fg)">Decide por:</b> estética da clínica, casos reais, ver a simulação antes.</li>
+            <li><b style="color:var(--fg)">Gatilho da LP:</b> "você vê o resultado antes de começar".</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONCEITO -->
+  <section class="ch" id="conceito">
+    <div class="head">
+      <p class="eyebrow">Conceito</p>
+      <h2>Todo sorriso tem um desenho</h2>
+      <p class="lead">"Arco" vem do arco dental, a curva que os dentes formam vista de cima. É também o formato do sorriso e de uma ponte: estrutura que sustenta. A marca fala de projeto, precisão e cuidado, sem a frieza das clínicas de luxo.</p>
+    </div>
+    <div class="grid3">
+      <div class="box"><h3>Precisão</h3><p class="cap" style="margin:0">Planejamento digital, escaneamento 3D, guia cirúrgico. Traço limpo e geométrico.</p></div>
+      <div class="box"><h3>Acolhimento</h3><p class="cap" style="margin:0">Sedação, conversa sem pressa, sábado de manhã. Cantos arredondados, verde calmo.</p></div>
+      <div class="box"><h3>Resultado natural</h3><p class="cap" style="margin:0">Nada de branco estourado. Cor de porcelana real, fotos de luz natural.</p></div>
+    </div>
+  </section>
+
+  <!-- LOGO -->
+  <section class="ch" id="logo">
+    <div class="head">
+      <p class="eyebrow">Logo</p>
+      <h2>Símbolo de dois arcos</h2>
+      <p class="lead">O arco externo é a arcada; o interno, em âmbar, é o sorriso e o cuidado no centro. Assinatura em minúsculas para soar próxima.</p>
+    </div>
+    <div class="logo-stage">
+      <div class="stage s-light">
+        <svg viewBox="0 0 330 80" style="width:min(100%,360px)" role="img" aria-label="Logo horizontal Arco Odontologia">
+          <use href="#arco" x="0" y="8" width="72" height="64" style="color:var(--b-salvia)"/>
+          <text x="88" y="50" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="46" letter-spacing="-1.6" fill="currentColor">arco</text>
+          <text x="91" y="70" font-family="IBM Plex Mono, monospace" font-size="11.5" letter-spacing="4.2" fill="var(--b-salvia)">ODONTOLOGIA</text>
+        </svg>
+        <span class="lbl">Principal · horizontal</span>
+      </div>
+      <div class="stage s-dark">
+        <svg viewBox="0 0 120 120" style="width:120px" role="img" aria-label="Logo vertical">
+          <use href="#arco" x="28" y="6" width="64" height="56" style="color:var(--b-menta)"/>
+          <text x="60" y="94" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="30" letter-spacing="-1" fill="currentColor">arco</text>
+          <text x="60" y="110" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7.5" letter-spacing="2.6" fill="var(--b-menta)">ODONTOLOGIA</text>
+        </svg>
+        <span class="lbl">Vertical · negativo</span>
+      </div>
+      <div class="stage s-salvia">
+        <svg viewBox="0 0 64 56" style="width:84px;color:var(--b-porcelana)" role="img" aria-label="Símbolo isolado"><use href="#arco"/></svg>
+        <span class="lbl">Símbolo · avatar</span>
+      </div>
+    </div>
+    <div class="rules">
+      <div class="box">
+        <h3>Área de proteção</h3>
+        <svg viewBox="0 0 220 110" style="width:100%" aria-hidden="true">
+          <rect x="6" y="6" width="208" height="98" rx="6" fill="none" stroke="var(--accent)" stroke-dasharray="4 4"/>
+          <rect x="34" y="28" width="152" height="54" fill="var(--accent-soft)"/>
+          <use href="#arco" x="42" y="34" width="44" height="40" style="color:var(--accent)"/>
+          <text x="94" y="64" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="26" fill="var(--fg)">arco</text>
+          <text x="12" y="20" font-family="IBM Plex Mono, monospace" font-size="9" fill="var(--muted)">x = altura do "a"</text>
+        </svg>
+        <p class="cap" style="margin:0">Deixe em volta do logo um espaço livre igual à altura da letra "a".</p>
+      </div>
+      <div class="box">
+        <h3>Tamanho mínimo</h3>
+        <div style="display:flex;gap:20px;align-items:end;padding-block:18px">
+          <svg viewBox="0 0 330 80" style="width:110px" aria-hidden="true"><use href="#arco" x="0" y="8" width="72" height="64" style="color:var(--accent)"/><text x="88" y="50" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="46" fill="var(--fg)">arco</text></svg>
+          <svg viewBox="0 0 64 56" style="width:20px;color:var(--accent)" aria-hidden="true"><use href="#arco"/></svg>
+        </div>
+        <p class="cap" style="margin:0">Horizontal: 110 px na tela / 30 mm impresso. Símbolo sozinho: 20 px / 6 mm.</p>
+      </div>
+      <div class="box">
+        <h3>Não fazer</h3>
+        <ul>
+          <li>Trocar o âmbar do arco interno por outra cor.</li>
+          <li>Colocar dente, brilho ou estrela no símbolo.</li>
+          <li>Escrever "ARCO" em maiúsculas ou em outra fonte.</li>
+          <li>Aplicar sobre foto sem uma camada escura ou clara por baixo.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CORES -->
+  <section class="ch" id="cores">
+    <div class="head">
+      <p class="eyebrow">Cores</p>
+      <h2>Paleta porcelana e sálvia</h2>
+      <p class="lead">Fugimos do azul hospitalar que todo dentista usa. O verde-sálvia passa calma e saúde; o âmbar entra pouco, só em botões e destaques. Clique no código para copiar.</p>
+    </div>
+    <div class="palette" id="palette"></div>
+    <div>
+      <div class="ratio" aria-label="Proporção de uso das cores">
+        <div style="flex:45;background:var(--b-porcelana);color:var(--b-grafite)">45%</div>
+        <div style="flex:20;background:var(--b-grafite);color:var(--b-porcelana)">20%</div>
+        <div style="flex:15;background:var(--b-salvia);color:var(--b-porcelana)">15%</div>
+        <div style="flex:12;background:var(--b-menta);color:var(--b-grafite)">12%</div>
+        <div style="flex:5;background:var(--b-ambar);color:var(--b-grafite)">5%</div>
+        <div style="flex:3;background:var(--b-nevoa)"></div>
+      </div>
+      <p class="cap">Proporção de uso: muito fundo claro, texto grafite, sálvia nas áreas de marca, âmbar só no que se clica.</p>
+    </div>
+  </section>
+
+  <!-- TIPOGRAFIA -->
+  <section class="ch" id="tipografia">
+    <div class="head">
+      <p class="eyebrow">Tipografia</p>
+      <h2>Três fontes, cada uma com um papel</h2>
+      <p class="lead">Todas grátis no Google Fonts, então funcionam direto na LP e no Canva.</p>
+    </div>
+    <div>
+      <div class="type-row">
+        <div class="spec">Bricolage Grotesque<br>ExtraBold 800 · títulos</div>
+        <div style="font-family:var(--font-display);font-weight:800;font-size:clamp(30px,5vw,52px);letter-spacing:-.03em;line-height:1.05">Seu sorriso planejado antes do primeiro passo.</div>
+      </div>
+      <div class="type-row">
+        <div class="spec">Bricolage Grotesque<br>SemiBold 600 · subtítulos</div>
+        <div style="font-family:var(--font-display);font-weight:600;font-size:24px">Implantes com sedação consciente</div>
+      </div>
+      <div class="type-row">
+        <div class="spec">Figtree<br>Regular 400 · texto · 16–18 px</div>
+        <div style="max-width:62ch">Na primeira consulta, a gente faz o escaneamento 3D da sua boca e mostra na tela como o tratamento vai ficar. Você sai sabendo o plano, o prazo e o valor, sem compromisso.</div>
+      </div>
+      <div class="type-row">
+        <div class="spec">IBM Plex Mono<br>Regular 400 · rótulos, CRO, dados</div>
+        <div class="mono" style="letter-spacing:.08em">RESPONSÁVEL TÉCNICA · DRA. LÍVIA ANDRADE · CRO-SP 000000</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GRAFISMOS -->
+  <section class="ch" id="grafismos">
+    <div class="head">
+      <p class="eyebrow">Grafismos e ícones</p>
+      <h2>A curva vira padrão</h2>
+      <p class="lead">O arco repetido forma uma textura para fundos de post e seções da LP. Os ícones têm traço de 1,75 px, cantos redondos e um ponto em âmbar quando precisam de destaque.</p>
+    </div>
+    <div class="stage s-salvia" style="min-height:180px;padding:0;overflow:hidden">
+      <canvas id="pattern" style="width:100%;height:200px;display:block" aria-label="Padrão de arcos repetidos"></canvas>
+    </div>
+    <div class="icons">
+      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3.5c-2 0-3.2 1.5-3.2 3.6 0 1.8.9 2.8 1.3 4.4h13.8c.4-1.6 1.3-2.6 1.3-4.4 0-2.1-1.2-3.6-3.2-3.6-1.9 0-3 1-5 1s-3.1-1-5-1z"/><path d="M9 11.5v2h6v-2M10 15.5h4M10.5 17.5h3M11 19.5h2"/></svg>Implante</div>
+      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4c-2 0-3.2 1.6-3.2 3.8 0 3 1.6 4.4 2 8.2.3 2.6 1 4 2 4 1.4 0 1.4-4.6 4.2-4.6s2.8 4.6 4.2 4.6c1 0 1.7-1.4 2-4 .4-3.8 2-5.2 2-8.2C20.2 5.6 19 4 17 4c-1.9 0-3 1-5 1S8.9 4 7 4z"/><path d="M19.5 1.5v3M18 3h3" stroke="var(--b-ambar)"/></svg>Lentes</div>
+      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9c0 6 3.6 9 8 9s8-3 8-9"/><path d="M8 9c0 3.5 1.8 5 4 5s4-1.5 4-5" stroke="var(--b-ambar)"/></svg>Planejamento</div>
+      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="4" height="13" rx="2"/><rect x="10" y="4" width="4" height="13" rx="2"/><rect x="16" y="3" width="4" height="13" rx="2"/><path d="M4 21h16"/><circle cx="18" cy="6.5" r="1.4" fill="var(--b-ambar)" stroke="none"/></svg>Clareamento</div>
+      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/><circle cx="12" cy="15" r="1.4" fill="var(--b-ambar)" stroke="none"/></svg>Agendar</div>
+      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18.5V7a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H8z"/><path d="M8.5 9.5h7M8.5 12.5h4"/></svg>Conversa</div>
+    </div>
+  </section>
+
+  <!-- MOODBOARD -->
+  <section class="ch" id="moodboard">
+    <div class="head">
+      <p class="eyebrow">Moodboard e fotografia</p>
+      <h2>Luz de janela, gente real</h2>
+      <p class="lead">Cada bloco abaixo descreve a foto que deve ocupar aquele espaço. Use como lista de busca no Unsplash/Pexels ou como roteiro de uma sessão de fotos na clínica.</p>
+    </div>
+    <div class="mood">
+      <div class="m big" style="background:linear-gradient(160deg,#F5F8F7 0%,#CFE8DF 70%,#9CC7B8 100%);color:var(--b-grafite)">Pessoa de 50+ sorrindo de verdade, luz lateral de janela, fundo desfocado em tom claro. Nada de fundo branco de estúdio.</div>
+      <div class="m tall" style="background:linear-gradient(180deg,#2F5D57,#16242A);color:var(--b-porcelana)">Mãos da doutora segurando o scanner intraoral, close.</div>
+      <div class="m" style="background:#E6EEEC;color:var(--b-grafite)">Consultório com madeira clara e plantas.</div>
+      <div class="m" style="background:#E3A03A;color:var(--b-grafite)">Detalhe quente: café na recepção, poltrona.</div>
+      <div class="m" style="background:#CFE8DF;color:var(--b-grafite)">Tela mostrando a simulação 3D do sorriso.</div>
+      <div class="m" style="background:#16242A;color:var(--b-menta)">Retrato da equipe, sem jaleco engomado em fila.</div>
+      <div class="m" style="background:linear-gradient(120deg,#F5F8F7,#E6EEEC);color:var(--b-grafite);border:1px solid var(--line)">Textura: cerâmica, porcelana, linho.</div>
+    </div>
+    <div class="grid2">
+      <div class="box"><h3>Usar</h3><ul><li>Luz natural, tom levemente quente</li><li>Pessoas de 35 a 65 anos, diversas</li><li>Sorrisos naturais, dentes com cor de dente</li><li>Bastante espaço vazio para texto</li></ul></div>
+      <div class="box"><h3>Evitar</h3><ul><li>Dente 3D brilhante e estrelinhas</li><li>Modelo de 20 anos com sorriso branco-papel</li><li>Instrumentos cirúrgicos e sangue</li><li>Filtro azul frio de hospital</li></ul></div>
+    </div>
+  </section>
+
+  <!-- VOZ -->
+  <section class="ch" id="voz">
+    <div class="head">
+      <p class="eyebrow">Tom de voz</p>
+      <h2>Fala como a doutora fala na cadeira</h2>
+      <p class="lead">Explica com calma, usa "você", troca termo técnico por palavra comum e nunca promete o que não pode garantir.</p>
+    </div>
+    <div class="voice">
+      <div style="display:grid;gap:12px">
+        <p class="eyebrow">Escrever assim</p>
+        <p class="say">"Antes de começar, você vê na tela como o seu sorriso vai ficar."</p>
+        <p class="say">"Tem medo de dentista? A gente trabalha com sedação consciente: você fica relaxado o tempo todo."</p>
+        <p class="say">"Na avaliação você sai com o plano, o prazo e o valor por escrito."</p>
+      </div>
+      <div style="display:grid;gap:12px">
+        <p class="eyebrow">Não escrever assim</p>
+        <p class="say no">"O melhor implante de Ribeirão com resultado garantido!"</p>
+        <p class="say no">"Reabilitação oral com carga imediata sobre implantes osseointegráveis."</p>
+        <p class="say no">"PROMOÇÃO! Lentes a partir de R$ 499 só essa semana!!!"</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LP -->
+  <section class="ch" id="lp">
+    <div class="head">
+      <p class="eyebrow">Roteiro da landing page</p>
+      <h2>10 seções, uma ação: chamar no WhatsApp</h2>
+      <p class="lead">A ordem segue a cabeça do paciente: entender a promessa, confiar, tirar o medo, ver o preço como possível e agir. Os textos já estão prontos para usar.</p>
+    </div>
+    <div class="lp">
+      <div class="lp-sec"><span class="n">01</span><div><h4>Hero</h4><p class="copy"><b>Implantes e lentes com planejamento digital. Você vê o resultado antes de começar.</b> Sub: Na primeira consulta você faz o escaneamento 3D e sai com o plano, o prazo e o valor por escrito. Botão: "Agendar minha avaliação". Foto: <span class="mono">hero-paciente.jpg</span>.</p></div></div>
+      <div class="lp-sec"><span class="n">02</span><div><h4>Prova rápida</h4><p class="copy">Faixa logo abaixo: <b>4,9 no Google · 12 anos · +3.200 pacientes · sábado de manhã</b> (números fictícios).</p></div></div>
+      <div class="lp-sec"><span class="n">03</span><div><h4>Para quem é</h4><p class="copy"><b>Usa prótese que solta? Perdeu um dente? Quer um sorriso mais bonito sem parecer artificial?</b> Três cartões com ícone, um para cada dor.</p></div></div>
+      <div class="lp-sec"><span class="n">04</span><div><h4>Tratamentos</h4><p class="copy">Implante unitário, protocolo (dentadura fixa), lentes de contato dental, clareamento. Cada um com 2 linhas e "Saiba mais" que abre o WhatsApp com a mensagem pronta.</p></div></div>
+      <div class="lp-sec"><span class="n">05</span><div><h4>Como funciona</h4><p class="copy"><b>1. Avaliação → 2. Escaneamento 3D → 3. Plano e orçamento por escrito → 4. Tratamento com sedação, se quiser.</b></p></div></div>
+      <div class="lp-sec"><span class="n">06</span><div><h4>Casos reais</h4><p class="copy">Carrossel de antes e depois com autorização escrita (TCLE) e legenda do caso. Seguir regra do CFO, sem exagero. No portfólio usamos <span class="mono">caso-resultado.jpg</span> marcada como "imagem ilustrativa" até existir caso real.</p></div></div>
+      <div class="lp-sec"><span class="n">07</span><div><h4>Quem cuida de você</h4><p class="copy">Foto e mini-bio da Dra. Lívia e da equipe, com CRO. <b>"Eu explico cada etapa antes de fazer."</b></p></div></div>
+      <div class="lp-sec"><span class="n">08</span><div><h4>Depoimentos</h4><p class="copy">3 avaliações do Google com nome e foto (com permissão), no estilo cartão do Google.</p></div></div>
+      <div class="lp-sec"><span class="n">09</span><div><h4>Perguntas frequentes</h4><p class="copy">Dói? · Quanto tempo leva? · Quanto custa? (resposta: o valor depende do plano e você recebe por escrito na avaliação) · Aceita convênio? · Lente desgasta o dente? · E se eu tiver pouco osso?</p></div></div>
+      <div class="lp-sec"><span class="n">10</span><div><h4>CTA final + rodapé</h4><p class="copy"><b>Seu novo sorriso começa com uma conversa.</b> Botão de WhatsApp, mapa, horário, endereço, responsável técnica e CRO, link de política de privacidade.</p></div></div>
+    </div>
+    <div class="note"><b>Mensagem pronta do WhatsApp:</b> <span class="mono">Olá! Vi o site da Arco e quero agendar minha avaliação com escaneamento 3D.</span> Coloque um parâmetro diferente por botão para saber qual seção converte mais.</div>
+  </section>
+
+  <!-- APLICAÇÕES -->
+  <section class="ch" id="aplicacoes">
+    <div class="head">
+      <p class="eyebrow">Aplicações</p>
+      <h2>A marca em uso</h2>
+    </div>
+    <div class="apps">
+      <div style="grid-column:span 12">
+        <div class="browser">
+          <div class="bar"><i></i><i></i><i></i><span>arcoodontologia.com.br</span></div>
+          <div class="hero">
+            <nav>
+              <svg viewBox="0 0 330 80" style="width:120px" aria-label="Arco Odontologia"><use href="#arco" x="0" y="8" width="72" height="64" style="color:#2F5D57"/><text x="88" y="54" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="50" fill="#16242A">arco</text></svg>
+              <div class="links"><span>Tratamentos</span><span>Como funciona</span><span>Equipe</span><span>Dúvidas</span></div>
+              <span class="b1" style="padding:8px 14px;font-size:13px">WhatsApp</span>
+            </nav>
+            <div>
+              <h4>Implantes e lentes com planejamento digital.</h4>
+              <p>Você vê o resultado antes de começar. Na primeira consulta, escaneamento 3D e plano com valor por escrito.</p>
+              <div class="cta"><span class="b1">Agendar minha avaliação</span><span class="b2">Ver tratamentos</span></div>
+            </div>
+            <div class="photo"><small>foto: paciente 50+, luz de janela</small></div>
+            <div class="proof"><div><b>4,9</b>no Google</div><div><b>12 anos</b>em Ribeirão</div><div><b>+3.200</b>pacientes</div><div><b>Sábado</b>de manhã</div></div>
+          </div>
+        </div>
+        <p class="cap">Hero da landing page no desktop. A foto em formato de arco repete o símbolo.</p>
+      </div>
+      <div style="grid-column:span 4">
+        <div class="card-front"><svg viewBox="0 0 120 120" style="width:44%" aria-label="Frente do cartão"><use href="#arco" x="28" y="6" width="64" height="56" style="color:#CFE8DF"/><text x="60" y="94" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="30" fill="#F5F8F7">arco</text><text x="60" y="110" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="7.5" letter-spacing="2.6" fill="#CFE8DF">ODONTOLOGIA</text></svg></div>
+        <p class="cap">Cartão de visita, frente.</p>
+      </div>
+      <div style="grid-column:span 4">
+        <div class="card-back">
+          <div><div class="nm">Dra. Lívia Andrade</div><div class="rl">Implantodontia e estética</div></div>
+          <div class="ct">(16) 9 0000-0000<br>R. das Palmeiras, 000 · Jd. Botânico<br>Ribeirão Preto/SP<br>CRO-SP 000000</div>
+        </div>
+        <p class="cap">Cartão de visita, verso. 85 × 55 mm.</p>
+      </div>
+      <div style="grid-column:span 4;display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start">
+        <div><div class="stage s-salvia" style="aspect-ratio:1;min-height:0;border-radius:50%;padding:22%"><svg viewBox="0 0 64 56" style="width:100%;color:#F5F8F7" aria-label="Foto de perfil"><use href="#arco"/></svg></div><p class="cap">Perfil Instagram/WhatsApp.</p></div>
+        <div><div class="stage s-menta" style="aspect-ratio:1;min-height:0;border-radius:18px;padding:22%"><svg viewBox="0 0 64 56" style="width:100%;color:#2F5D57" aria-label="Ícone do site"><use href="#arco"/></svg></div><p class="cap">Favicon e ícone do app.</p></div>
+      </div>
+      <div style="grid-column:span 5">
+        <div class="post">
+          <svg class="arcbg" viewBox="0 0 64 56" aria-hidden="true"><path d="M8 8 C8 40 20 50 32 50 C44 50 56 40 56 8" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round"/></svg>
+          <span class="mono" style="position:relative;letter-spacing:.1em;color:#2F5D57">PLANEJAMENTO DIGITAL</span>
+          <h4>Seu sorriso tem desenho. A gente projeta junto com você.</h4>
+          <div class="foot"><span>@arcoodontologia</span><span class="mono" style="font-size:10px">Resp. téc. Dra. Lívia Andrade · CRO-SP 000000</span></div>
+        </div>
+        <p class="cap">Post de feed 1080 × 1080.</p>
+      </div>
+      <div style="grid-column:span 3">
+        <div class="story">
+          <span class="mono" style="letter-spacing:.1em;color:#CFE8DF">TEM MEDO DE DENTISTA?</span>
+          <h4>Implante com sedação consciente. Você fica tranquilo do começo ao fim.</h4>
+          <div style="display:grid;gap:10px"><div class="btn">Agendar avaliação</div><span class="mono" style="font-size:9.5px;opacity:.8">CRO-SP 000000</span></div>
+        </div>
+        <p class="cap">Story 1080 × 1920.</p>
+      </div>
+      <div style="grid-column:span 4;display:grid;gap:12px;align-content:start">
+        <div class="box">
+          <h3>Botões da LP</h3>
+          <div style="display:flex;flex-wrap:wrap;gap:10px">
+            <span class="b1">Agendar avaliação</span>
+            <span class="b2">Ver tratamentos</span>
+            <span style="background:#E3A03A;color:#16242A;padding:11px 16px;border-radius:99px;font-weight:600;font-size:14px">Falar no WhatsApp</span>
+          </div>
+          <p class="cap" style="margin:0">Âmbar só no botão fixo de WhatsApp no celular, para ele ser o elemento mais visível da tela.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REFS -->
+  <section class="ch" id="refs">
+    <div class="head">
+      <p class="eyebrow">Referências</p>
+      <h2>Onde buscar inspiração e material</h2>
+      <p class="lead">Buscas prontas. Junte 10 a 15 imagens num painel (Figma, Milanote ou Pinterest) antes de abrir o editor.</p>
+    </div>
+    <div class="refs">
+      <a class="ref" href="https://www.behance.net/search/projects/dental%20clinic%20branding" target="_blank" rel="noopener"><strong>Behance · dental clinic branding</strong><span>Identidades completas de clínicas, boa fonte para ver aplicações.</span></a>
+      <a class="ref" href="https://dribbble.com/search/dental-landing-page" target="_blank" rel="noopener"><strong>Dribbble · dental landing page</strong><span>Layouts de LP e hero; olhe estrutura, não copie o visual.</span></a>
+      <a class="ref" href="https://www.pinterest.com/search/pins/?q=dental%20clinic%20interior%20minimal" target="_blank" rel="noopener"><strong>Pinterest · dental clinic interior minimal</strong><span>Ambientes com madeira clara e verde, para o moodboard.</span></a>
+      <a class="ref" href="https://unsplash.com/s/photos/smiling-senior" target="_blank" rel="noopener"><strong>Unsplash · smiling senior</strong><span>Fotos grátis da persona Roberto, luz natural.</span></a>
+      <a class="ref" href="https://www.pexels.com/search/dentist/" target="_blank" rel="noopener"><strong>Pexels · dentist</strong><span>Fotos de consultório e procedimento, uso comercial liberado.</span></a>
+      <a class="ref" href="https://www.landingfolio.com/" target="_blank" rel="noopener"><strong>Landingfolio</strong><span>Galeria de landing pages reais por seção (hero, FAQ, depoimentos).</span></a>
+      <a class="ref" href="https://fonts.google.com/specimen/Bricolage+Grotesque" target="_blank" rel="noopener"><strong>Google Fonts · Bricolage Grotesque</strong><span>Fonte dos títulos. Figtree e IBM Plex Mono no mesmo site.</span></a>
+      <a class="ref" href="https://website.cfo.org.br/" target="_blank" rel="noopener"><strong>CFO · Conselho Federal de Odontologia</strong><span>Regras de publicidade odontológica para não errar no texto.</span></a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <span>Arco Odontologia é uma marca fictícia criada para portfólio. Nomes, CRO e números são exemplos.</span>
+  <span class="mono">brandbook v1 · nov/2026</span>
+</footer>
+
+<script>
+(function(){
+  var colors=[
+    {n:"Porcelana",h:"#F5F8F7",u:"Fundo principal",fg:"#16242A"},
+    {n:"Grafite",h:"#16242A",u:"Texto e fundos escuros",fg:"#F5F8F7"},
+    {n:"Sálvia",h:"#2F5D57",u:"Cor da marca, botões",fg:"#F5F8F7"},
+    {n:"Menta",h:"#CFE8DF",u:"Fundos de destaque",fg:"#16242A"},
+    {n:"Âmbar",h:"#E3A03A",u:"Detalhe, CTA WhatsApp",fg:"#16242A"},
+    {n:"Névoa",h:"#E6EEEC",u:"Divisórias, cartões",fg:"#16242A"}
+  ];
+  function rgb(h){var n=parseInt(h.slice(1),16);return (n>>16)+", "+((n>>8)&255)+", "+(n&255)}
+  var el=document.getElementById("palette");
+  colors.forEach(function(c){
+    var d=document.createElement("div");d.className="sw";
+    d.innerHTML='<div class="chip" style="background:'+c.h+'"></div><div class="info"><strong>'+c.n+'</strong><button type="button" aria-label="Copiar '+c.h+'">'+c.h+'</button><span class="mono" style="color:var(--muted);font-size:11px">RGB '+rgb(c.h)+'</span><span style="font-size:13px;color:var(--muted)">'+c.u+'</span></div>';
+    var b=d.querySelector("button");
+    b.addEventListener("click",function(){
+      var done=function(){b.textContent="copiado";setTimeout(function(){b.textContent=c.h},1200)};
+      try{navigator.clipboard.writeText(c.h).then(done,function(){sel(b)})}catch(e){sel(b)}
+    });
+    el.appendChild(d);
+  });
+  function sel(node){var r=document.createRange();r.selectNodeContents(node);var s=getSelection();s.removeAllRanges();s.addRange(r)}
+
+  var cv=document.getElementById("pattern");
+  function draw(){
+    var w=cv.clientWidth,h=cv.clientHeight,dpr=window.devicePixelRatio||1;
+    cv.width=w*dpr;cv.height=h*dpr;var g=cv.getContext("2d");g.scale(dpr,dpr);
+    g.lineCap="round";var s=56;
+    for(var y=-10,row=0;y<h+s;y+=s*0.62,row++){
+      for(var x=(row%2?s/2:0)-s;x<w+s;x+=s){
+        g.strokeStyle=(row*7+Math.round(x/s))%11===0?"#E3A03A":"rgba(207,232,223,.55)";
+        g.lineWidth=3;g.beginPath();g.moveTo(x+6,y);g.bezierCurveTo(x+6,y+26,x+16,y+34,x+s/2,y+34);g.bezierCurveTo(x+s-16,y+34,x+s-6,y+26,x+s-6,y);g.stroke();
+      }
+    }
+  }
+  draw();window.addEventListener("resize",draw);
+})();
+</script>

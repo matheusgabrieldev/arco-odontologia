@@ -1,0 +1,61 @@
+<!-- @dsCard height=288 -->
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Arco Odontologia</title>
+<style>
+  html, body { margin:0; height:100%; }
+  body { background:var(--fundo-pagina); color:var(--texto); font-family:var(--font-texto); overflow:hidden; }
+  .cover { position:relative; height:288px; overflow:hidden; }
+  .art { position:absolute; top:0; left:480px; width:480px; height:288px; overflow:hidden; }
+  .art svg { display:block; width:480px; height:288px; }
+  .salvia { fill:var(--marca); }
+  .menta { fill:var(--marca-suave); }
+  .ambar { fill:var(--destaque); }
+  .tinta { fill:var(--texto); }
+  .blk { rx:var(--raio-lg); }
+  .disco { rx:28px; }
+  .arc { fill:none; stroke:var(--marca-suave); stroke-width:6; stroke-linecap:round; }
+  .arc-ext { fill:none; stroke:var(--marca-suave); stroke-width:16; stroke-linecap:round; }
+  .arc-int { fill:none; stroke:var(--destaque); stroke-width:11; stroke-linecap:round; }
+  .words { position:absolute; left:var(--espaco-6); bottom:var(--espaco-6); max-width:440px; }
+  .name { margin:0; font-family:var(--font-display); font-size:64px; line-height:.95; font-weight:400; letter-spacing:-.035em; color:var(--texto); }
+  .name span { color:var(--texto-suave); }
+  .tag { margin:var(--espaco-3) 0 0 2px; font-size:14px; line-height:20px; color:var(--texto-suave); }
+</style>
+</head>
+<body>
+<div class="cover">
+<div class="art" aria-hidden="true">
+<svg viewBox="0 0 480 288" width="480" height="288">
+<!--
+  blocks      texto (grafite) 144×264 bleeding off the bottom · marca (sálvia) 208×260 bleeding off the top, the biggest · marca-suave (menta) 112×192 bleeding off the right · destaque (âmbar) one 56px disc, the only small one (5% of the brand) — about 38% of 960×288
+  arrangement one tall sálvia slab with satellites, staggered: ink low-left, menta low-right, the âmbar disc above it like the inner arc of the mark
+  pattern     arcs, from "Todo sorriso tem um desenho" and the arco dental motif: nine U-arcs at a 60px pitch cut into the sálvia slab in menta, and the mark's own two arcs drawn large on the ink block
+  scales      gutters espaco-4 (16); pitch 60 ≈ espaco-8 − espaco-1; corners raio-lg (28); disc rx half of 56
+-->
+<rect class="tinta blk" x="0" y="40" width="144" height="264" rx="28"/>
+<path class="arc-ext" d="M28 84 C28 188 50 222 72 222 C94 222 116 188 116 84"/>
+<path class="arc-int" d="M50 84 C50 146 60 170 72 170 C84 170 94 146 94 84"/>
+<rect class="salvia blk" x="160" y="-28" width="208" height="268" rx="28"/>
+<path class="arc" d="M182 36 C182 62 192 70 208 70 C224 70 234 62 234 36"/>
+<path class="arc" d="M242 36 C242 62 252 70 268 70 C284 70 294 62 294 36"/>
+<path class="arc" d="M302 36 C302 62 312 70 328 70 C344 70 354 62 354 36"/>
+<path class="arc" d="M182 96 C182 122 192 130 208 130 C224 130 234 122 234 96"/>
+<path class="arc" d="M242 96 C242 122 252 130 268 130 C284 130 294 122 294 96"/>
+<path class="arc" d="M302 96 C302 122 312 130 328 130 C344 130 354 122 354 96"/>
+<path class="arc" d="M182 156 C182 182 192 190 208 190 C224 190 234 182 234 156"/>
+<path class="arc" d="M242 156 C242 182 252 190 268 190 C284 190 294 182 294 156"/>
+<path class="arc" d="M302 156 C302 182 312 190 328 190 C344 190 354 182 354 156"/>
+<rect class="ambar disco" x="384" y="24" width="56" height="56" rx="28"/>
+<rect class="menta blk" x="384" y="96" width="112" height="192" rx="28"/>
+</svg>
+</div>
+<div class="words">
+  <h1 class="name">Arco<br><span>Odontologia</span></h1>
+  <p class="tag">Técnica de ponta com conversa de gente. Implantes e lentes em Ribeirão Preto.</p>
+</div>
+</div>
+</body>
+</html>

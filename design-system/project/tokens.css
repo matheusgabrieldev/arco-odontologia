@@ -1,0 +1,80 @@
+/* Arco Odontologia Design System — generated from tokens.json */
+:root, [data-theme="claro"] {
+  --fundo-pagina: #EAF0EE;
+  --fundo: #F5F8F7;
+  --fundo-elevado: #FFFFFF;
+  --fundo-suave: #E6EEEC;
+  --linha: #D5E0DD;
+  --linha-forte: #6B8480;
+  --texto: #16242A;
+  --texto-suave: #55666B;
+  --marca: #2F5D57;
+  --sobre-marca: #F5F8F7;
+  --marca-suave: #CFE8DF;
+  --destaque: #E3A03A;
+  --sobre-destaque: #16242A;
+  --grafite: #16242A;
+  --sobre-grafite: #F5F8F7;
+  --foco: #2F5D57;
+  --veu: rgba(22, 36, 42, 0.58);
+  --vidro: rgba(245, 248, 247, 0.14);
+  --vidro-borda: rgba(245, 248, 247, 0.28);
+  --sombra-flutuante: 0 12px 32px -14px #16242A47;
+}
+[data-theme="escuro"] {
+  --fundo-pagina: #0F1A1E;
+  --fundo: #16242A;
+  --fundo-elevado: #1E2F35;
+  --fundo-suave: #22363C;
+  --linha: #2E464C;
+  --linha-forte: #6E8A90;
+  --texto: #F5F8F7;
+  --texto-suave: #A9BAB8;
+  --marca: #8CC9B7;
+  --sobre-marca: #16242A;
+  --marca-suave: #24433F;
+  --destaque: #E3A03A;
+  --sobre-destaque: #16242A;
+  --grafite: #0F1A1E;
+  --sobre-grafite: #F5F8F7;
+  --foco: #CFE8DF;
+  --veu: rgba(15, 26, 30, 0.66);
+  --vidro: rgba(245, 248, 247, 0.10);
+  --vidro-borda: rgba(245, 248, 247, 0.22);
+  --sombra-flutuante: 0 12px 32px -14px #000000B3;
+}
+:root {
+  --espaco-1: 4px;
+  --espaco-2: 8px;
+  --espaco-3: 12px;
+  --espaco-4: 16px;
+  --espaco-5: 24px;
+  --espaco-6: 32px;
+  --espaco-7: 48px;
+  --espaco-8: 64px;
+  --espaco-9: 96px;
+  --espaco-10: 128px;
+  --margem-placa: 12px;
+  --raio-sm: 12px;
+  --raio-md: 20px;
+  --raio-lg: 28px;
+  --raio-pilula: 999px;
+  --raio-arco: 240px;
+  --largura-conteudo: 1120px;
+  --largura-texto: 62ch;
+  --altura-toque: 48px;
+  --font-display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --font-texto: "Figtree", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+.titulo-hero { font-family: var(--font-display); font-size: 72px; line-height: 1.0; font-weight: 400; letter-spacing: -0.035em; }
+.titulo-secao { font-family: var(--font-display); font-size: 48px; line-height: 1.04; font-weight: 400; letter-spacing: -0.03em; }
+.titulo-cartao { font-family: var(--font-display); font-size: 24px; line-height: 1.2; font-weight: 500; letter-spacing: -0.015em; }
+.numero { font-family: var(--font-display); font-size: 56px; line-height: 1; font-weight: 400; letter-spacing: -0.035em; }
+.citacao { font-family: var(--font-display); font-size: 22px; line-height: 1.4; font-weight: 400; letter-spacing: -0.01em; }
+.texto-destaque { font-family: var(--font-texto); font-size: 19px; line-height: 1.55; font-weight: 400; }
+.texto-corpo { font-family: var(--font-texto); font-size: 16px; line-height: 1.6; font-weight: 400; }
+.texto-botao { font-family: var(--font-texto); font-size: 15px; line-height: 1.2; font-weight: 500; }
+.rotulo { font-family: var(--font-texto); font-size: 14px; line-height: 1.4; font-weight: 500; }
+.texto-pequeno { font-family: var(--font-texto); font-size: 13px; line-height: 1.5; font-weight: 400; }
+.rotulo-legal { font-family: var(--font-mono); font-size: 11px; line-height: 1.5; font-weight: 400; letter-spacing: 0.06em; }

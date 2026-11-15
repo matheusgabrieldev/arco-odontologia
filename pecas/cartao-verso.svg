@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 550" width="850" height="550">
+  <rect width="850" height="550" fill="#F5F8F7"/>
+  <g transform="translate(660 -40) scale(4)" opacity="0.12">
+    <path d="M8 8 C8 40 20 50 32 50 C44 50 56 40 56 8" fill="none" stroke="#2F5D57" stroke-width="7" stroke-linecap="round"/>
+  </g>
+  <text x="70" y="130" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="48" letter-spacing="-1" fill="#16242A">Dra. Lívia Andrade</text>
+  <text x="70" y="175" font-family="Figtree, sans-serif" font-size="24" fill="#2F5D57">Implantodontia e estética</text>
+  <g font-family="IBM Plex Mono, monospace" font-size="19" fill="#16242A">
+    <text x="70" y="370">(16) 9 0000-0000</text>
+    <text x="70" y="402">R. das Palmeiras, 000 · Jd. Botânico</text>
+    <text x="70" y="434">Ribeirão Preto/SP</text>
+    <text x="70" y="480" fill="#2F5D57">CRO-SP 000000</text>
+  </g>
+  <rect x="70" y="210" width="60" height="5" rx="2.5" fill="#E3A03A"/>
+</svg>

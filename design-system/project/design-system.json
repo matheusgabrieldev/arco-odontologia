@@ -1,0 +1,236 @@
+{
+  "v": 3,
+  "layout": "files",
+  "createdOnFiles": {
+    "v": 1,
+    "at": "2026-11-14T18:35:00Z"
+  },
+  "title": "Arco Odontologia",
+  "namespace": "ArcoOdontologia",
+  "libraries": [],
+  "sections": {},
+  "groups": [
+    "Logos",
+    "Icones",
+    "Fotos"
+  ],
+  "assetGroups": {
+    "Logos": {
+      "name": "Logos",
+      "tile": "l",
+      "order": [
+        "logo-horizontal.svg",
+        "simbolo.svg",
+        "simbolo-negativo.svg",
+        "logo-vertical-negativo.svg"
+      ],
+      "files": {
+        "logo-horizontal.svg": {
+          "name": "logo-horizontal.svg",
+          "blob": "f7c35fba07f34345452fb31302a603bd",
+          "size": 701,
+          "type": "image/svg+xml"
+        },
+        "simbolo.svg": {
+          "name": "simbolo.svg",
+          "blob": "cc1d5aa5c46bd992821b4635e9361743",
+          "size": 352,
+          "type": "image/svg+xml"
+        },
+        "simbolo-negativo.svg": {
+          "name": "simbolo-negativo.svg",
+          "blob": "4922b4aaf001c56dfab959095082d6f3",
+          "size": 352,
+          "type": "image/svg+xml"
+        },
+        "logo-vertical-negativo.svg": {
+          "name": "logo-vertical-negativo.svg",
+          "blob": "6362c11c209ff372a828399296c96dee",
+          "size": 780,
+          "type": "image/svg+xml"
+        }
+      }
+    },
+    "Icones": {
+      "name": "Icones",
+      "tile": "s",
+      "order": [
+        "implante.svg",
+        "lentes.svg",
+        "clareamento.svg",
+        "planejamento.svg",
+        "agendar.svg",
+        "conversa.svg"
+      ],
+      "files": {
+        "implante.svg": {
+          "name": "implante.svg",
+          "blob": "ece94cfd01b8e1cd6b5d77c7b5af0c5b",
+          "size": 390,
+          "type": "image/svg+xml"
+        },
+        "lentes.svg": {
+          "name": "lentes.svg",
+          "blob": "b934ab976107813351b31bfc48bd29a5",
+          "size": 431,
+          "type": "image/svg+xml"
+        },
+        "clareamento.svg": {
+          "name": "clareamento.svg",
+          "blob": "961a771b5c6f2679051603b1499560a5",
+          "size": 446,
+          "type": "image/svg+xml"
+        },
+        "planejamento.svg": {
+          "name": "planejamento.svg",
+          "blob": "84c11a13b7a005eeb8316b3296ad8ed7",
+          "size": 294,
+          "type": "image/svg+xml"
+        },
+        "agendar.svg": {
+          "name": "agendar.svg",
+          "blob": "7fe85bd1a887b588b4c5db13904a41f0",
+          "size": 353,
+          "type": "image/svg+xml"
+        },
+        "conversa.svg": {
+          "name": "conversa.svg",
+          "blob": "d75ae2b8d85c6494ae26ac1c2d452da9",
+          "size": 301,
+          "type": "image/svg+xml"
+        }
+      }
+    },
+    "Fotos": {
+      "name": "Fotos",
+      "tile": "m",
+      "order": [
+        "hero-casal.jpg",
+        "hero-paciente.jpg",
+        "dor-protese.jpg",
+        "dor-sorriso.jpg",
+        "implante-modelo.jpg",
+        "trat-implante.jpg",
+        "trat-lentes.jpg",
+        "trat-clareamento.jpg",
+        "planejamento-digital.jpg",
+        "caso-resultado.jpg",
+        "doutora.jpg",
+        "equipe.jpg",
+        "consultorio.jpg",
+        "depo-roberto.jpg",
+        "depo-marcia.jpg",
+        "depo-jorge.jpg"
+      ],
+      "files": {
+        "hero-paciente.jpg": {
+          "name": "hero-paciente.jpg",
+          "blob": "f927f2d5c4766bfb8326d80c82223941",
+          "size": 116079,
+          "type": "image/jpeg"
+        },
+        "dor-protese.jpg": {
+          "name": "dor-protese.jpg",
+          "blob": "f6a66706e5ffce49cb7fb085ced4aa02",
+          "size": 103927,
+          "type": "image/jpeg"
+        },
+        "dor-sorriso.jpg": {
+          "name": "dor-sorriso.jpg",
+          "blob": "f909bf6bf469db81d33112a7bf945eff",
+          "size": 204455,
+          "type": "image/jpeg"
+        },
+        "implante-modelo.jpg": {
+          "name": "implante-modelo.jpg",
+          "blob": "59070c0b09f14f350a79f3ed5d39f636",
+          "size": 61982,
+          "type": "image/jpeg"
+        },
+        "trat-implante.jpg": {
+          "name": "trat-implante.jpg",
+          "blob": "d1239267a58d043220253cc0306557c7",
+          "size": 139116,
+          "type": "image/jpeg"
+        },
+        "trat-lentes.jpg": {
+          "name": "trat-lentes.jpg",
+          "blob": "f9237b1bbb0eeea633a3dc46aa0934dc",
+          "size": 144577,
+          "type": "image/jpeg"
+        },
+        "trat-clareamento.jpg": {
+          "name": "trat-clareamento.jpg",
+          "blob": "a71ee1784c47dcb9d21789c5b257f20e",
+          "size": 243257,
+          "type": "image/jpeg"
+        },
+        "planejamento-digital.jpg": {
+          "name": "planejamento-digital.jpg",
+          "blob": "7b3d36ac60516562bcaa79f011671822",
+          "size": 201256,
+          "type": "image/jpeg"
+        },
+        "caso-resultado.jpg": {
+          "name": "caso-resultado.jpg",
+          "blob": "0e4c6586a8b6a7265ee2d4893ad0b7f1",
+          "size": 162581,
+          "type": "image/jpeg"
+        },
+        "doutora.jpg": {
+          "name": "doutora.jpg",
+          "blob": "83f459b8ffba18f5e2ee8e8a9a00e862",
+          "size": 123437,
+          "type": "image/jpeg"
+        },
+        "equipe.jpg": {
+          "name": "equipe.jpg",
+          "blob": "15cb533af81e3d7e6217876754c2692b",
+          "size": 112360,
+          "type": "image/jpeg"
+        },
+        "consultorio.jpg": {
+          "name": "consultorio.jpg",
+          "blob": "6750e90020622006c48cf1a9679ea8a9",
+          "size": 176560,
+          "type": "image/jpeg"
+        },
+        "depo-roberto.jpg": {
+          "name": "depo-roberto.jpg",
+          "blob": "7effb5e10c4e2f2421eefed39b486e51",
+          "size": 131900,
+          "type": "image/jpeg"
+        },
+        "depo-marcia.jpg": {
+          "name": "depo-marcia.jpg",
+          "blob": "f3f85854ab3f63336a20326e1b7bc54d",
+          "size": 141656,
+          "type": "image/jpeg"
+        },
+        "depo-jorge.jpg": {
+          "name": "depo-jorge.jpg",
+          "blob": "0f07ae2631b5cb7946ef55867d1d510d",
+          "size": 169703,
+          "type": "image/jpeg"
+        },
+        "hero-casal.jpg": {
+          "name": "hero-casal.jpg",
+          "blob": "523e76c41e4f82b9c9578408abbd5810",
+          "size": 224830,
+          "type": "image/jpeg"
+        }
+      }
+    }
+  },
+  "blobs": {},
+  "docs": {
+    "readme": "project/README.md",
+    "sections": []
+  },
+  "lastChange": {
+    "by": "Matheus",
+    "at": "2026-11-14T20:10:00Z",
+    "via": "Claude Code",
+    "note": "Hero dividido com o arco como curva, foto nova do casal e botões redesenhados."
+  }
+}
